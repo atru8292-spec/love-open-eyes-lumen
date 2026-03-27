@@ -1,0 +1,2577 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Любовь с открытыми глазами — Программа Юлии Люмен</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --gold: #c9a84c;
+        --gold-light: #e8d5a3;
+        --gold-dark: #8b6914;
+        --cream: #fbf7f0;
+        --cream2: #f5ede0;
+        --dark: #1a1a1a;
+        --dark2: #2d2417;
+        --text: #3d3d3d;
+        --white: #ffffff;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--cream);
+        color: #2e2e2e;
+        overflow-x: hidden;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Cormorant Garamond", serif;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(251, 247, 240, 0.97);
+        backdrop-filter: blur(12px);
+        z-index: 1000;
+        padding: 14px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--gold-light);
+      }
+      .nav-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1rem;
+        color: var(--gold-dark);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text);
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        transition: color 0.3s;
+        font-weight: 500;
+      }
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+
+      /* BUTTONS */
+      .btn-gold {
+        background: linear-gradient(
+          135deg,
+          var(--gold) 0%,
+          var(--gold-dark) 100%
+        );
+        color: var(--white);
+        padding: 17px 46px;
+        border: none;
+        font-size: 0.73rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+      }
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 35px rgba(201, 168, 76, 0.4);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--gold);
+        padding: 17px 46px;
+        border: 1px solid var(--gold);
+        font-size: 0.73rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+      }
+      .btn-outline:hover {
+        background: var(--gold);
+        color: var(--white);
+      }
+      .btn-light {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--white);
+        padding: 17px 46px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        font-size: 0.73rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+      }
+      .btn-light:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: var(--gold);
+        color: var(--gold);
+      }
+
+      /* HERO */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 160px 20px 100px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)),
+          url("https://i.ibb.co/0jQJHLJ9/photo-5053092735748869055-y.jpg")
+            center/cover no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 820px;
+      }
+      .hero-badge {
+        display: inline-block;
+        border: 1px solid rgba(201, 168, 76, 0.5);
+        color: var(--gold);
+        padding: 8px 24px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.82rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 36px;
+      }
+      .hero h1 {
+        font-size: clamp(3rem, 8vw, 6.5rem);
+        color: var(--white);
+        line-height: 1.02;
+        margin-bottom: 8px;
+        font-weight: 300;
+      }
+      .hero h1 em {
+        color: var(--gold);
+        font-style: italic;
+        font-weight: 600;
+        display: block;
+      }
+      .hero-sub {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.1rem, 2.8vw, 1.5rem);
+        color: rgba(255, 255, 255, 0.72);
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin-bottom: 28px;
+      }
+      .hero-desc {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.9;
+        max-width: 520px;
+        margin: 0 auto 52px;
+        font-weight: 400;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* COMMONS */
+      .sec-label {
+        text-align: center;
+        color: var(--gold);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.78rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        font-weight: 600;
+      }
+      .sec-title {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.2rem, 5vw, 3.6rem);
+        color: var(--dark);
+        font-weight: 400;
+        margin-bottom: 18px;
+        line-height: 1.2;
+      }
+      .sec-desc {
+        text-align: center;
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 2;
+        max-width: 640px;
+        margin: 0 auto 60px;
+        font-weight: 400;
+      }
+      .sec-title-light {
+        color: var(--white);
+      }
+      .sec-desc-light {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* FOR WHOM */
+      .forwhom {
+        background: var(--cream);
+        padding: 110px 20px;
+      }
+      .forwhom-inner {
+        max-width: 1020px;
+        margin: 0 auto;
+      }
+      .forwhom-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 3px;
+      }
+      .forwhom-card {
+        background: var(--white);
+        padding: 40px 32px;
+        border-left: 3px solid transparent;
+        transition: all 0.35s;
+      }
+      .forwhom-card:hover {
+        border-left-color: var(--gold);
+        background: #fffcf7;
+      }
+      .forwhom-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 4rem;
+        color: rgba(201, 168, 76, 0.15);
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 14px;
+        display: block;
+      }
+      .forwhom-card h4 {
+        font-size: 1.25rem;
+        color: var(--dark);
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+      .forwhom-card p {
+        font-size: 0.88rem;
+        color: #777;
+        line-height: 1.9;
+        font-weight: 400;
+      }
+
+      /* PROGRAM */
+      .program {
+        background: linear-gradient(160deg, #111111 0%, #2a1f10 100%);
+        padding: 110px 20px;
+      }
+      .program-container {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      .days-box {
+        text-align: center;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        background: rgba(201, 168, 76, 0.03);
+        padding: 50px 30px;
+        margin-bottom: 60px;
+        max-width: 660px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .days-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(5rem, 14vw, 8rem);
+        color: var(--gold);
+        font-weight: 700;
+        line-height: 1;
+      }
+      .days-label {
+        font-size: 0.65rem;
+        letter-spacing: 5px;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin: 10px 0 18px;
+        font-weight: 600;
+        display: block;
+      }
+      .days-text {
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 2;
+        font-weight: 400;
+        max-width: 460px;
+        margin: 0 auto;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 2px;
+      }
+      .step-card {
+        border: 1px solid rgba(201, 168, 76, 0.12);
+        background: rgba(255, 255, 255, 0.015);
+        padding: 44px 32px;
+        text-align: center;
+        transition: all 0.35s;
+        position: relative;
+        overflow: hidden;
+      }
+      .step-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+        opacity: 0;
+        transition: opacity 0.35s;
+      }
+      .step-card:hover {
+        background: rgba(201, 168, 76, 0.03);
+      }
+      .step-card:hover::after {
+        opacity: 1;
+      }
+      .step-days {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+        color: rgba(201, 168, 76, 0.85);
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        font-weight: 600;
+      }
+      .step-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(5rem, 12vw, 7rem);
+        color: rgba(201, 168, 76, 0.08);
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 14px;
+      }
+      .step-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.5rem;
+        color: var(--white);
+        margin-bottom: 16px;
+        font-weight: 500;
+      }
+      .step-text {
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.9;
+        font-weight: 400;
+      }
+      .step-result {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(201, 168, 76, 0.12);
+        font-size: 0.85rem;
+        color: rgba(201, 168, 76, 0.9);
+        font-style: italic;
+        line-height: 1.85;
+        font-weight: 400;
+      }
+      .format-strip {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        border: 1px solid rgba(201, 168, 76, 0.15);
+      }
+      .format-item {
+        flex: 1;
+        min-width: 140px;
+        padding: 32px 20px;
+        text-align: center;
+        border-right: 1px solid rgba(201, 168, 76, 0.12);
+      }
+      .format-item:last-child {
+        border-right: none;
+      }
+      .format-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.8rem;
+        color: var(--gold);
+        font-weight: 600;
+        display: block;
+        line-height: 1;
+      }
+      .format-label {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 10px;
+        display: block;
+        font-weight: 500;
+      }
+
+      /* WHAT YOU GET */
+      .whatget {
+        background: var(--cream2);
+        padding: 110px 20px;
+      }
+      .whatget-grid {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 3px;
+      }
+      .whatget-card {
+        background: var(--white);
+        padding: 36px 30px;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s;
+      }
+      .whatget-card:hover {
+        border-bottom-color: var(--gold);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+      }
+      .whatget-icon {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.8rem;
+        color: var(--gold);
+        opacity: 0.5;
+        margin-bottom: 18px;
+        display: block;
+      }
+      .whatget-card h4 {
+        font-size: 1.2rem;
+        color: var(--dark);
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+      .whatget-card p {
+        font-size: 0.88rem;
+        color: #777;
+        line-height: 1.9;
+        font-weight: 400;
+      }
+
+      /* CASES */
+      .cases {
+        background: linear-gradient(135deg, #fdfbf8 0%, #f2e8db 100%);
+        padding: 110px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+      .cases::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 10% 50%,
+          rgba(201, 168, 76, 0.05) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+      .cases-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        position: relative;
+        z-index: 1;
+      }
+      .case-card {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 2px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06),
+          0 0 0 1px rgba(201, 168, 76, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .case-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1),
+          0 0 0 2px rgba(201, 168, 76, 0.25);
+      }
+      .case-header {
+        background: linear-gradient(160deg, #1a1a1a 0%, #2d2417 100%);
+        padding: 44px 28px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .case-header::before {
+        content: "";
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(201, 168, 76, 0.25),
+          transparent
+        );
+      }
+      .case-header::after {
+        content: "";
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(201, 168, 76, 0.25),
+          transparent
+        );
+      }
+      .case-hname {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.4rem;
+        font-style: italic;
+        color: var(--gold-light);
+        margin-bottom: 10px;
+        line-height: 1.1;
+        position: relative;
+        z-index: 1;
+      }
+      .case-hage {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.64rem;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: rgba(232, 213, 163, 0.7);
+        font-weight: 500;
+      }
+      .case-sec {
+        padding: 26px 28px;
+      }
+      .case-sec-label {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.58rem;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .case-sec-label::before {
+        content: "";
+        width: 18px;
+        height: 2px;
+        background: currentColor;
+        flex-shrink: 0;
+      }
+      .case-sec.before {
+        background: #fdfbf8;
+        border-bottom: 1px dashed rgba(201, 168, 76, 0.12);
+      }
+      .case-sec.before .case-sec-label {
+        color: #c4a06a;
+      }
+      .case-sec-text {
+        font-family: "Lora", serif;
+        font-size: 1rem;
+        line-height: 1.9;
+        font-style: italic;
+        color: #3a3a3a;
+        font-weight: 400;
+      }
+      .case-sec.result {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2a1f10 100%);
+        padding-bottom: 28px;
+      }
+      .case-sec.result .case-sec-label {
+        color: rgba(232, 213, 163, 0.85);
+      }
+      .case-time {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 8px 18px;
+        border-radius: 50px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .case-list {
+        list-style: none;
+      }
+      .case-list li {
+        font-family: "Lora", serif;
+        font-size: 0.93rem;
+        color: rgba(255, 255, 255, 0.88);
+        line-height: 1.85;
+        padding: 9px 0 9px 26px;
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        font-weight: 400;
+      }
+      .case-list li:last-child {
+        border-bottom: none;
+      }
+      .case-list li::before {
+        content: "◆";
+        position: absolute;
+        left: 0;
+        color: var(--gold);
+        font-size: 0.65rem;
+        top: 10px;
+      }
+      .case-sec.review {
+        background: #fdfbf8;
+      }
+      .case-sec.review .case-sec-label {
+        color: var(--gold-dark);
+      }
+      .case-quote {
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: 1.02rem;
+        color: #2a2a2a;
+        line-height: 1.9;
+        border-left: 3px solid var(--gold);
+        padding-left: 18px;
+        position: relative;
+        font-weight: 400;
+      }
+      .case-quote::before {
+        content: "\201C";
+        position: absolute;
+        left: -6px;
+        top: -6px;
+        font-size: 2.5rem;
+        color: rgba(201, 168, 76, 0.1);
+        font-family: "Cormorant Garamond", serif;
+        line-height: 1;
+      }
+
+      /* ABOUT */
+      .about {
+        background: linear-gradient(160deg, #111111 0%, #2a1f10 100%);
+        padding: 110px 20px;
+      }
+      .about-inner {
+        max-width: 880px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        gap: 70px;
+        align-items: start;
+      }
+      .about-photo-wrap {
+        position: relative;
+      }
+      .about-photo {
+        width: 100%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+        filter: contrast(1.05) brightness(0.95);
+      }
+      .about-frame {
+        position: absolute;
+        bottom: -14px;
+        right: -14px;
+        width: calc(100% - 22px);
+        height: calc(100% - 22px);
+        border: 1px solid rgba(201, 168, 76, 0.25);
+        pointer-events: none;
+      }
+      .about-text {
+        padding-top: 10px;
+      }
+      .about-name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        color: var(--white);
+        font-weight: 400;
+        margin-bottom: 6px;
+        line-height: 1.05;
+      }
+      .about-role {
+        font-size: 0.72rem;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 30px;
+        font-weight: 500;
+      }
+      .about-bio {
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 2.1;
+        font-weight: 400;
+        margin-bottom: 36px;
+      }
+      .about-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        font-size: 1.2rem;
+        color: rgba(201, 168, 76, 0.9);
+        line-height: 1.75;
+        border-left: 2px solid rgba(201, 168, 76, 0.35);
+        padding-left: 20px;
+        margin-bottom: 36px;
+        font-weight: 400;
+      }
+      .about-facts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .about-fact {
+        border: 1px solid rgba(201, 168, 76, 0.15);
+        padding: 18px 20px;
+      }
+      .about-fact-num {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.2rem;
+        color: var(--gold);
+        font-weight: 600;
+        line-height: 1;
+        display: block;
+      }
+      .about-fact-label {
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 6px;
+        display: block;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      /* TESTIMONIALS */
+      .testimonials {
+        background: var(--dark);
+        padding: 110px 20px;
+      }
+      .testimonials .sec-label {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .testimonials .sec-title {
+        color: var(--white);
+      }
+      .testimonials .sec-desc {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      .carousel-wrap {
+        max-width: 820px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(201, 168, 76, 0.12);
+        padding: 32px 0 0;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .carousel-slide {
+        flex: 0 0 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 16px;
+      }
+      .carousel-slide img {
+        max-height: 560px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 3px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(201, 168, 76, 0.15);
+      }
+      .carousel-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-top: 1px solid rgba(201, 168, 76, 0.1);
+        padding: 20px 0;
+        margin-top: 32px;
+      }
+      .carousel-btn {
+        width: 48px;
+        height: 48px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        border-radius: 50%;
+      }
+      .carousel-btn:hover {
+        background: var(--gold);
+        border-color: var(--gold);
+      }
+      .carousel-dots {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .carousel-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: all 0.3s;
+        border: none;
+      }
+      .carousel-dot.active {
+        background: var(--gold);
+        width: 18px;
+        border-radius: 3px;
+      }
+      .carousel-counter {
+        text-align: center;
+        margin-top: 16px;
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+        color: rgba(255, 255, 255, 0.35);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+      }
+      .carousel-hint {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.2);
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      /* TARIFFS */
+      .tariffs {
+        background: var(--cream);
+        padding: 110px 20px;
+      }
+      .tariffs-grid {
+        max-width: 1040px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        align-items: start;
+      }
+      .tariff-card {
+        background: var(--white);
+        border: none;
+        padding: 44px 34px;
+        position: relative;
+        transition: all 0.35s;
+        box-shadow: 0 1px 0 #e8ddd0, 1px 0 0 #e8ddd0, -1px 0 0 #e8ddd0,
+          0 -1px 0 #e8ddd0;
+      }
+      .tariff-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08), 0 0 0 1px var(--gold);
+        z-index: 2;
+      }
+      .tariff-card.featured {
+        background: linear-gradient(160deg, #1a1a1a 0%, #2d2417 100%);
+        box-shadow: none;
+        border: 1px solid rgba(201, 168, 76, 0.4);
+        z-index: 1;
+      }
+      .tariff-card.featured:hover {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--gold);
+      }
+      .tariff-badge {
+        display: inline-block;
+        background: var(--gold);
+        color: var(--white);
+        font-size: 0.55rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-family: "Montserrat", sans-serif;
+      }
+      .tariff-name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.1rem;
+        color: var(--dark);
+        margin-bottom: 8px;
+        font-weight: 500;
+        line-height: 1;
+      }
+      .tariff-card.featured .tariff-name {
+        color: var(--white);
+      }
+      .tariff-tagline {
+        font-size: 0.8rem;
+        color: #999;
+        margin-bottom: 28px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      .tariff-card.featured .tariff-tagline {
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .tariff-divider {
+        height: 1px;
+        background: #f0e8dc;
+        margin: 0 0 22px;
+      }
+      .tariff-card.featured .tariff-divider {
+        background: rgba(201, 168, 76, 0.15);
+      }
+      .tariff-price-old {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.6rem;
+        color: #aaa;
+        text-decoration: line-through;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .tariff-card.featured .tariff-price-old {
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .tariff-price {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        color: var(--gold);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .tariff-price-note {
+        font-size: 0.62rem;
+        color: var(--gold);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 28px;
+        display: block;
+      }
+      .tariff-list {
+        list-style: none;
+        margin-bottom: 24px;
+      }
+      .tariff-list li {
+        font-size: 0.86rem;
+        color: #555;
+        padding: 11px 0;
+        border-bottom: 1px solid #f5efe8;
+        font-weight: 400;
+        line-height: 1.6;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .tariff-card.featured .tariff-list li {
+        color: rgba(255, 255, 255, 0.7);
+        border-bottom-color: rgba(255, 255, 255, 0.07);
+      }
+      .tariff-list li::before {
+        content: "✦";
+        color: var(--gold);
+        font-size: 0.5rem;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+      .tariff-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .tariff-btns .btn-gold,
+      .tariff-btns .btn-outline {
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+      .btn-prepay {
+        background: transparent;
+        color: var(--gold);
+        padding: 13px 20px;
+        border: 1px solid rgba(201, 168, 76, 0.4);
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+      }
+      .btn-prepay:hover {
+        background: rgba(201, 168, 76, 0.08);
+        border-color: var(--gold);
+      }
+      .tariff-card.featured .btn-prepay {
+        border-color: rgba(201, 168, 76, 0.5);
+        color: var(--gold-light);
+      }
+      .tariff-card.featured .btn-prepay:hover {
+        background: rgba(201, 168, 76, 0.12);
+      }
+
+      /* LAUNCH BANNER */
+      .launch-banner {
+        max-width: 1040px;
+        margin: 0 auto 50px;
+        border: 1px solid var(--gold);
+        background: linear-gradient(135deg, #fffcf5 0%, #fff8eb 100%);
+        padding: 44px 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .launch-banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 0%,
+          rgba(201, 168, 76, 0.08) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+      .launch-badge {
+        display: inline-block;
+        background: var(--gold);
+        color: var(--white);
+        padding: 6px 18px;
+        font-size: 0.58rem;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 18px;
+        position: relative;
+      }
+      .launch-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+        color: var(--dark);
+        font-weight: 400;
+        margin-bottom: 12px;
+        line-height: 1.2;
+        position: relative;
+      }
+      .launch-title em {
+        color: var(--gold-dark);
+        font-style: italic;
+        font-weight: 600;
+      }
+      .launch-text {
+        font-size: 0.88rem;
+        color: #666;
+        line-height: 1.9;
+        max-width: 520px;
+        margin: 0 auto 8px;
+        font-weight: 400;
+        position: relative;
+      }
+      .launch-deadline {
+        font-size: 0.72rem;
+        color: var(--gold-dark);
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+      }
+
+      /* TARIFF LEGAL */
+      .tariff-legal {
+        max-width: 1040px;
+        margin: 40px auto 0;
+        text-align: center;
+        font-size: 0.68rem;
+        color: #999;
+        line-height: 1.8;
+        font-weight: 400;
+      }
+      .tariff-legal a {
+        color: var(--gold);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .tariff-legal a:hover {
+        color: var(--gold-dark);
+      }
+
+      /* FAQ */
+      .faq {
+        background: var(--cream2);
+        padding: 110px 20px;
+      }
+      .faq-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .faq-item {
+        border-bottom: 1px solid #ddd4c0;
+      }
+      .faq-q {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.3rem;
+        color: var(--dark);
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        padding: 24px 0;
+      }
+      .faq-q::after {
+        content: "✦";
+        color: var(--gold);
+        font-size: 0.65rem;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+      }
+      .faq-q.open::after {
+        transform: rotate(90deg);
+      }
+      .faq-a {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 2;
+        font-weight: 400;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.3s ease;
+      }
+      .faq-a.open {
+        max-height: 400px;
+        padding-bottom: 24px;
+      }
+
+      /* FINAL CTA */
+      .final-cta {
+        background: linear-gradient(160deg, #111111 0%, #2a1f10 100%);
+        padding: 120px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .final-cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 0%,
+          rgba(201, 168, 76, 0.1) 0%,
+          transparent 60%
+        );
+      }
+      .final-cta-inner {
+        position: relative;
+        z-index: 1;
+        max-width: 680px;
+        margin: 0 auto;
+      }
+      .final-cta-badge {
+        display: inline-block;
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        color: var(--gold);
+        padding: 7px 22px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.82rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 36px;
+      }
+      .final-cta h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+        color: var(--white);
+        font-weight: 300;
+        margin-bottom: 10px;
+        line-height: 1.15;
+      }
+      .final-cta h2 em {
+        color: var(--gold);
+        font-style: italic;
+        font-weight: 600;
+      }
+      .final-cta p {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.95rem;
+        line-height: 2;
+        font-weight: 400;
+        max-width: 480px;
+        margin: 0 auto 48px;
+      }
+      .final-cta-btns {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .final-cta-note {
+        margin-top: 24px;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.35);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #0d0d0d;
+        padding: 36px 30px 28px;
+        text-align: center;
+        border-top: 1px solid rgba(201, 168, 76, 0.1);
+      }
+      .footer-legal {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .footer-legal p {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.68rem;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+        line-height: 1.8;
+      }
+      .footer-legal span {
+        color: rgba(201, 168, 76, 0.6);
+      }
+      .footer-legal a {
+        color: rgba(201, 168, 76, 0.5);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        transition: color 0.3s;
+      }
+      .footer-legal a:hover {
+        color: var(--gold);
+      }
+      .footer-rekvizity {
+        margin-top: 14px;
+        font-size: 0.6rem;
+        color: rgba(255, 255, 255, 0.2);
+        line-height: 1.7;
+        letter-spacing: 0.3px;
+      }
+      .footer-rekvizity a {
+        color: rgba(255, 255, 255, 0.3);
+        text-decoration: none;
+      }
+      .footer-rekvizity a:hover {
+        color: rgba(201, 168, 76, 0.5);
+      }
+
+      /* FLOAT TG */
+      .float-btn {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 9999;
+        background: #2aabee;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s;
+        text-decoration: none;
+      }
+      .float-btn:hover {
+        transform: scale(1.1);
+      }
+      .float-btn svg {
+        width: 26px;
+        height: 26px;
+        fill: #fff;
+      }
+
+      /* COOKIE BANNER */
+      .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 26, 0.97);
+        backdrop-filter: blur(10px);
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        z-index: 99998;
+        border-top: 1px solid rgba(201, 168, 76, 0.15);
+        transform: translateY(100%);
+        transition: transform 0.4s ease;
+      }
+      .cookie-banner.show {
+        transform: translateY(0);
+      }
+      .cookie-banner p {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
+        font-weight: 400;
+      }
+      .cookie-banner a {
+        color: var(--gold);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .cookie-accept {
+        background: var(--gold);
+        color: var(--white);
+        border: none;
+        padding: 10px 24px;
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        flex-shrink: 0;
+        transition: all 0.3s;
+      }
+      .cookie-accept:hover {
+        background: var(--gold-dark);
+      }
+
+      /* MOBILE */
+      @media (max-width: 768px) {
+        nav {
+          padding: 12px 16px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hero {
+          padding: 130px 16px 70px;
+        }
+        .hero-btns {
+          gap: 10px;
+        }
+        .btn-gold,
+        .btn-outline,
+        .btn-light {
+          padding: 15px 28px;
+          font-size: 0.68rem;
+        }
+        .forwhom,
+        .whatget,
+        .faq {
+          padding: 70px 16px;
+        }
+        .cases,
+        .program,
+        .about,
+        .testimonials {
+          padding: 70px 16px;
+        }
+        .final-cta {
+          padding: 80px 16px;
+        }
+        .about-inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .about-facts {
+          grid-template-columns: 1fr 1fr;
+        }
+        .format-strip {
+          flex-direction: column;
+        }
+        .format-item {
+          border-right: none;
+          border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+        }
+        .format-item:last-child {
+          border-bottom: none;
+        }
+        .cases-grid {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .case-card:not(:last-child) {
+          margin-bottom: 2px;
+        }
+        .carousel-slide img {
+          max-height: 420px;
+        }
+        .steps-grid {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+        .launch-banner {
+          padding: 30px 20px;
+          margin-left: 16px;
+          margin-right: 16px;
+        }
+        .tariffs {
+          padding: 60px 10px;
+        }
+        .tariffs-grid {
+          grid-template-columns: repeat(3, 1fr) !important;
+          gap: 4px !important;
+        }
+        .tariff-card {
+          padding: 18px 8px !important;
+        }
+        .tariff-badge {
+          font-size: 0.38rem !important;
+          letter-spacing: 0 !important;
+          padding: 3px 6px !important;
+          white-space: normal !important;
+          text-align: center !important;
+          line-height: 1.3 !important;
+        }
+        .tariff-name {
+          font-size: 0.95rem !important;
+          margin-top: 10px !important;
+          margin-bottom: 4px !important;
+          line-height: 1.1 !important;
+        }
+        .tariff-tagline {
+          font-size: 0.52rem !important;
+          margin-bottom: 10px !important;
+          line-height: 1.4 !important;
+        }
+        .tariff-divider {
+          margin: 10px 0 !important;
+        }
+        .tariff-price-old {
+          font-size: 0.85rem !important;
+        }
+        .tariff-price {
+          font-size: 1.3rem !important;
+          margin-bottom: 4px !important;
+        }
+        .tariff-price-note {
+          font-size: 0.45rem !important;
+          letter-spacing: 0.5px !important;
+          margin-bottom: 10px !important;
+        }
+        .tariff-list {
+          margin-bottom: 14px !important;
+        }
+        .tariff-list li {
+          font-size: 0.54rem !important;
+          padding: 5px 0 !important;
+          gap: 4px !important;
+          line-height: 1.35 !important;
+        }
+        .tariff-list li::before {
+          font-size: 0.4rem !important;
+          margin-top: 2px !important;
+        }
+        .tariff-btns .btn-gold,
+        .tariff-btns .btn-outline {
+          padding: 9px 2px !important;
+          font-size: 0.48rem !important;
+          letter-spacing: 0.3px !important;
+        }
+        .btn-prepay {
+          padding: 8px 2px !important;
+          font-size: 0.42rem !important;
+          letter-spacing: 0.3px !important;
+        }
+        .tariff-legal {
+          font-size: 0.55rem;
+          padding: 0 16px;
+        }
+        .cookie-banner {
+          flex-direction: column;
+          gap: 12px;
+          padding: 14px 16px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- FLOAT TG -->
+    <a
+      href="https://t.me/JuliaEnergopraktika"
+      class="float-btn"
+      target="_blank"
+    >
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+        />
+      </svg>
+    </a>
+
+    <!-- COOKIE BANNER (скрыт до подключения Метрики) -->
+    <div class="cookie-banner" id="cookieBanner">
+      <p>
+        Мы используем файлы cookie и сервисы аналитики для улучшения работы
+        сайта. Продолжая пользоваться сайтом, вы соглашаетесь с этим.
+        <a href="privacy.html">Подробнее</a>
+      </p>
+      <button class="cookie-accept" onclick="acceptCookies()">Принять</button>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">✦ Любовь с открытыми глазами</div>
+      <ul class="nav-links">
+        <li><a href="#program">Программа</a></li>
+        <li><a href="#cases">Истории</a></li>
+        <li><a href="#about">Юлия</a></li>
+        <li><a href="#testimonials">Отзывы</a></li>
+        <li><a href="#tariffs">Тарифы</a></li>
+        <li><a href="#contact">Записаться</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">✦ Программа-тренинг · Нейропсихология ✦</div>
+        <h1>Любовь<em>с открытыми глазами</em></h1>
+        <p class="hero-sub">
+          Программа для женщины, которая хочет счастливый брак с достойным
+          мужчиной
+        </p>
+        <p class="hero-desc">
+          41 день · 3 ступени · Нейропсихологический протокол<br />Меняем не
+          мужчину — меняем то, что внутри.<br />И мужчины это видят сами.
+        </p>
+        <div class="hero-btns">
+          <a href="#tariffs" class="btn-gold">Выбрать тариф</a>
+          <a href="#program" class="btn-outline">Узнать подробнее</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="forwhom">
+      <div class="forwhom-inner">
+        <p class="sec-label">✦ Для кого ✦</p>
+        <h2 class="sec-title">Эта программа для тебя, если…</h2>
+        <p class="sec-desc">
+          Ты умная, красивая, самодостаточная — и хочешь наконец встретить
+          своего мужчину
+        </p>
+        <div class="forwhom-grid">
+          <div class="forwhom-card">
+            <span class="forwhom-num">01</span>
+            <h4>Готова к серьёзным отношениям</h4>
+            <p>
+              Ты знаешь, чего хочешь — надёжного, успешного мужчину рядом.
+              Осталось убрать внутренние блоки, которые мешают его встретить.
+            </p>
+          </div>
+          <div class="forwhom-card">
+            <span class="forwhom-num">02</span>
+            <h4>Хорошие кажутся скучными</h4>
+            <p>
+              Стабильный мужчина не вызывает «химии». Зато от нестабильного не
+              можешь оторваться. Это не вкус — это нейронный паттерн.
+            </p>
+          </div>
+          <div class="forwhom-card">
+            <span class="forwhom-num">03</span>
+            <h4>Хочешь выбирать осознанно</h4>
+            <p>
+              Устала от случайных встреч. Хочешь видеть мужчин ясно — кто он на
+              самом деле — и выбирать с открытыми глазами.
+            </p>
+          </div>
+          <div class="forwhom-card">
+            <span class="forwhom-num">04</span>
+            <h4>Кризис в отношениях</h4>
+            <p>
+              Чувствуешь, что отношения зашли в тупик. Нет близости, нет
+              понимания, нет искры. Ты заслуживаешь большего — и знаешь это.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="program" id="program">
+      <div class="program-container">
+        <p class="sec-label">✦ Как устроена программа ✦</p>
+        <h2 class="sec-title sec-title-light">Три ступени трансформации</h2>
+        <p class="sec-desc sec-desc-light">
+          Каждая ступень — 41 день. Именно столько нужно мозгу, чтобы
+          сформировать новые нейронные связи и перевести их в автоматизм
+        </p>
+        <div class="days-box">
+          <div class="days-num">41</div>
+          <span class="days-label">день на каждую ступень</span>
+          <p class="days-text">
+            Не курс на выходные и не разовая сессия. Глубинная работа с
+            нейронными паттернами требует времени. 41 день — это минимум, после
+            которого изменения становятся необратимыми.
+          </p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-days">Ступень 1 · Дни 1–41</div>
+            <div class="step-num">1</div>
+            <h3 class="step-title">Освобождение от прошлого</h3>
+            <p class="step-text">
+              Ревизия и отпускание старого опыта — чтобы он больше не управлял
+              твоим выбором. Освобождение от негативных родительских установок и
+              сценариев прошлых отношений.
+            </p>
+            <div class="step-result">
+              Ты становишься свободной и открытой для нового — без груза
+              прошлого
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-days">Ступень 2 · Дни 42–82</div>
+            <div class="step-num">2</div>
+            <h3 class="step-title">Самоценность и опора</h3>
+            <p class="step-text">
+              Выстраивание глубинной уверенности в своей красоте и ценности. Ты
+              перестаёшь искать одобрения извне — и начинаешь управлять своей
+              жизнью сама.
+            </p>
+            <div class="step-result">
+              Ты уверена в себе, смело остаёшься собой и строишь отношения на
+              своих условиях
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-days">Ступень 3 · Дни 83–123</div>
+            <div class="step-num">3</div>
+            <h3 class="step-title">Новый опыт отношений</h3>
+            <p class="step-text">
+              Создание нового сценария счастливых отношений. Практика новых
+              моделей поведения — пока они не станут естественными. Ты
+              притягиваешь достойного мужчину.
+            </p>
+            <div class="step-result">
+              Ты выбираешь не тревогу — ты выбираешь любовь. И достойный мужчина
+              это чувствует
+            </div>
+          </div>
+        </div>
+        <div class="format-strip">
+          <div class="format-item">
+            <span class="format-num">11</span
+            ><span class="format-label">занятий в программе</span>
+          </div>
+          <div class="format-item">
+            <span class="format-num">5</span
+            ><span class="format-label">Zoom-сессий с Юлией</span>
+          </div>
+          <div class="format-item">
+            <span class="format-num">6</span
+            ><span class="format-label">аудио-медитаций</span>
+          </div>
+          <div class="format-item">
+            <span class="format-num">123</span
+            ><span class="format-label">дня сопровождения</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="whatget">
+      <p class="sec-label">✦ Что ты получишь ✦</p>
+      <h2 class="sec-title">Результаты программы</h2>
+      <p class="sec-desc">
+        Не «знания о себе» — конкретные изменения, которые ты почувствуешь
+      </p>
+      <div class="whatget-grid">
+        <div class="whatget-card">
+          <span class="whatget-icon">✦</span>
+          <h4>Уверенность в своей ценности</h4>
+          <p>
+            Ты перестаёшь доказывать и добиваться. Ты знаешь свою ценность — и
+            мужчины это чувствуют без слов.
+          </p>
+        </div>
+        <div class="whatget-card">
+          <span class="whatget-icon">✦</span>
+          <h4>Свобода от старых сценариев</h4>
+          <p>
+            Паттерны из прошлого больше не управляют твоим выбором. Ты видишь
+            мужчин ясно — без розовых очков и без страха.
+          </p>
+        </div>
+        <div class="whatget-card">
+          <span class="whatget-icon">✦</span>
+          <h4>Притяжение достойных мужчин</h4>
+          <p>
+            Когда меняется то, что внутри — меняется и то, кого ты притягиваешь.
+            Это не магия, это нейронаука.
+          </p>
+        </div>
+        <div class="whatget-card">
+          <span class="whatget-icon">✦</span>
+          <h4>Счастливый брак</h4>
+          <p>
+            Не «выжить рядом», не «терпеть» — а отношения с надёжным, успешным
+            мужчиной, в которых ты расцветаешь.
+          </p>
+        </div>
+        <div class="whatget-card">
+          <span class="whatget-icon">✦</span>
+          <h4>Внутренняя опора</h4>
+          <p>
+            Ты перестаёшь зависеть от его настроения, его оценок, его
+            присутствия. Твоя опора — внутри тебя.
+          </p>
+        </div>
+        <div class="whatget-card">
+          <span class="whatget-icon">✦</span>
+          <h4>Новая привлекательность</h4>
+          <p>
+            Та самая неотразимость, которую не объяснить словами. Она
+            появляется, когда женщина знает себе цену.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERT BRIDGE -->
+    <section
+      style="
+        background: linear-gradient(160deg, #111111 0%, #2a1f10 100%);
+        padding: 90px 20px;
+      "
+    >
+      <div style="max-width: 760px; margin: 0 auto; text-align: center">
+        <p class="sec-label">✦ Почему здесь — работает ✦</p>
+        <h2
+          style="
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            color: #fff;
+            font-weight: 300;
+            margin-bottom: 24px;
+            line-height: 1.2;
+          "
+        >
+          Ты всё знаешь — но не можешь применить.<br /><em
+            style="color: var(--gold); font-style: italic; font-weight: 600"
+            >Вот почему.</em
+          >
+        </h2>
+        <p
+          style="
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 2;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto 40px;
+          "
+        >
+          Психология объясняет,
+          <strong style="color: var(--gold-light)">что</strong> с тобой
+          происходит.<br />
+          Коучинг говорит,
+          <strong style="color: var(--gold-light)">что делать</strong>.<br />
+          Но ни то, ни другое не меняет нейронный паттерн — программу, которая
+          запускается автоматически, до того как ты успеваешь подумать.<br /><br />
+          Мой метод работает на уровне
+          <strong style="color: var(--gold-light)">нейронных связей</strong> —
+          там, где формируется сам механизм выбора. Не «что делать» — а «кем ты
+          становишься». И это уже не отменить.
+        </p>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2px;
+            max-width: 660px;
+            margin: 0 auto;
+          "
+        >
+          <div
+            style="
+              border: 1px solid rgba(201, 168, 76, 0.15);
+              padding: 28px 20px;
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 2.4rem;
+                color: var(--gold);
+                font-weight: 600;
+                line-height: 1;
+              "
+            >
+              ≠
+            </div>
+            <div
+              style="
+                font-size: 0.7rem;
+                color: rgba(255, 255, 255, 0.45);
+                margin-top: 8px;
+                font-family: 'Montserrat', sans-serif;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-weight: 500;
+              "
+            >
+              Не терапия
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid rgba(201, 168, 76, 0.15);
+              padding: 28px 20px;
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 2.4rem;
+                color: var(--gold);
+                font-weight: 600;
+                line-height: 1;
+              "
+            >
+              ≠
+            </div>
+            <div
+              style="
+                font-size: 0.7rem;
+                color: rgba(255, 255, 255, 0.45);
+                margin-top: 8px;
+                font-family: 'Montserrat', sans-serif;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-weight: 500;
+              "
+            >
+              Не коучинг
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid rgba(201, 168, 76, 0.15);
+              padding: 28px 20px;
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 2.4rem;
+                color: var(--gold);
+                font-weight: 600;
+                line-height: 1;
+              "
+            >
+              ✦
+            </div>
+            <div
+              style="
+                font-size: 0.7rem;
+                color: rgba(255, 255, 255, 0.45);
+                margin-top: 8px;
+                font-family: 'Montserrat', sans-serif;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-weight: 500;
+              "
+            >
+              Нейро-перепрошивка
+            </div>
+          </div>
+        </div>
+        <p
+          style="
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 0.72rem;
+            margin-top: 28px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 400;
+          "
+        >
+          Уже десятки кейсов среди женщин из Москвы, Дубая, Лондона и Нью-Йорка
+        </p>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section class="cases" id="cases">
+      <p class="sec-label">✦ Истории трансформации из терапии со мной ✦</p>
+      <h2 class="sec-title">Они уже прошли этот путь</h2>
+      <p class="sec-desc">
+        Разный возраст, разные страны, разные истории — один результат
+      </p>
+      <div class="cases-grid">
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-hname">Екатерина</div>
+            <div class="case-hage">29 лет · Москва</div>
+          </div>
+          <div class="case-sec before">
+            <span class="case-sec-label">Было</span>
+            <p class="case-sec-text">
+              «2 года работала с психологом — результата не было. Чувствовала
+              тупик, не понимала, что делать дальше.»
+            </p>
+          </div>
+          <div class="case-sec result">
+            <span class="case-sec-label">Стало</span>
+            <div class="case-time">⏱ За 5 сессий</div>
+            <ul class="case-list">
+              <li>
+                На 3-й сессии получила подарок — браслет Cartier за 13 000€
+              </li>
+              <li>Выросла внутренняя ценность — чувствую это каждый день</li>
+              <li>Изменения заметили все вокруг</li>
+            </ul>
+          </div>
+          <div class="case-sec review">
+            <span class="case-sec-label">Её слова</span>
+            <blockquote class="case-quote">
+              Покупка сессий — лучшая инвестиция в моей жизни. Просто шок в
+              хорошем смысле!
+            </blockquote>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-hname">Мария</div>
+            <div class="case-hage">32 года · Дубай</div>
+          </div>
+          <div class="case-sec before">
+            <span class="case-sec-label">Было</span>
+            <p class="case-sec-text">
+              «Долго была в роли любовницы. Не верила, что счастливые отношения
+              вообще возможны для меня.»
+            </p>
+          </div>
+          <div class="case-sec result">
+            <span class="case-sec-label">Стало</span>
+            <div class="case-time">⏱ За 1 месяц</div>
+            <ul class="case-list">
+              <li>Встретила будущего мужа — успешного предпринимателя</li>
+              <li>Через 3 месяца после знакомства — свадьба</li>
+              <li>Вместе переехали в Нью-Йорк, новая жизнь</li>
+            </ul>
+          </div>
+          <div class="case-sec review">
+            <span class="case-sec-label">Её слова</span>
+            <blockquote class="case-quote">
+              Я не верила, что такое возможно. Всё меняется во мне — и мужчины
+              это видят сразу.
+            </blockquote>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-hname">Алёна</div>
+            <div class="case-hage">38 лет · Лондон</div>
+          </div>
+          <div class="case-sec before">
+            <span class="case-sec-label">Было</span>
+            <p class="case-sec-text">
+              «Притягивала только токсичных мужчин. Постоянные эмоциональные
+              качели — думала, это норма.»
+            </p>
+          </div>
+          <div class="case-sec result">
+            <span class="case-sec-label">Стало</span>
+            <div class="case-time">⏱ За 3 сессии</div>
+            <ul class="case-list">
+              <li>Полностью пропал интерес к токсичным отношениям</li>
+              <li>Появились мужчины, которые уважают и ценят</li>
+              <li>Спокойствие и уверенность — теперь постоянное состояние</li>
+            </ul>
+          </div>
+          <div class="case-sec review">
+            <span class="case-sec-label">Её слова</span>
+            <blockquote class="case-quote">
+              Когда изменилась изнутри — пришли совершенно другие мужчины. Как
+              будто переключили что-то внутри.
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="about-photo-wrap">
+          <img
+            src="https://i.ibb.co/WpB6TzVr/1-37-resized.jpg"
+            alt="Юлия Люмен"
+            class="about-photo"
+          />
+          <div class="about-frame"></div>
+        </div>
+        <div class="about-text">
+          <p class="sec-label" style="text-align: left">✦ Автор программы ✦</p>
+          <h2 class="about-name">Юлия Люмен</h2>
+          <p class="about-role">Нейропсихолог · Автор программы</p>
+          <p class="about-bio">
+            Нейропсихолог с 20-летним опытом в бизнесе. Знаю мир успешных мужчин
+            изнутри — и точно понимаю, что они ищут в женщине.<br /><br />Я
+            поняла: дело не в выборе. Дело в нейронном паттерне, который
+            формируется до 7 лет и потом управляет всей любовной жизнью на
+            автопилоте.<br /><br />Программа «Любовь с открытыми глазами» — это
+            не терапия и не коучинг. Это нейропсихологический протокол, который
+            меняет сам механизм выбора партнёра. Изнутри. Навсегда.
+          </p>
+          <div class="about-quote">
+            «Ты не будешь "стараться". Ты просто станешь другой — той, рядом с
+            которой достойный мужчина хочет остаться навсегда.»
+          </div>
+          <div class="about-facts">
+            <div class="about-fact">
+              <span class="about-fact-num">5000+</span
+              ><span class="about-fact-label">часов практики с клиентами</span>
+            </div>
+            <div class="about-fact">
+              <span class="about-fact-num">20</span
+              ><span class="about-fact-label">лет опыта в бизнесе</span>
+            </div>
+            <div class="about-fact">
+              <span class="about-fact-num">12</span
+              ><span class="about-fact-label"
+                >стран — клиенты по всему миру</span
+              >
+            </div>
+            <div class="about-fact">
+              <span class="about-fact-num">50+</span
+              ><span class="about-fact-label">историй трансформации</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials">
+      <p class="sec-label">✦ Отзывы клиенток ✦</p>
+      <h2 class="sec-title">Они уже изменили свою жизнь</h2>
+      <p class="sec-desc">Реальные отзывы — реальные истории</p>
+      <div class="carousel-wrap">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img
+              src="https://i.ibb.co/CpFb5kjS/photo-4965330125641681855-y.jpg"
+              alt="Отзыв 1"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="https://i.ibb.co/d4PYzQXk/photo-4992800405754416213-y.jpg"
+              alt="Отзыв 2"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="https://i.ibb.co/nN3MzYV0/photo-4999268239951375900-y-1.jpg"
+              alt="Отзыв 3"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="https://i.ibb.co/zWKHNJhw/photo-5059954607425433189-y-1.jpg"
+              alt="Отзыв 4"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="https://i.ibb.co/XZnxyR1L/photo-4965330125641681854-y.jpg"
+              alt="Отзыв 5"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="https://i.ibb.co/1tqvfj8c/photo-4965330125641681856-y.jpg"
+              alt="Отзыв 6"
+            />
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="https://i.ibb.co/ynB9PDbY/photo-5028772865683598413-y-1.jpg"
+              alt="Отзыв 7"
+            />
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" onclick="moveSlide(-1)">←</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" onclick="moveSlide(1)">→</button>
+        </div>
+      </div>
+      <div class="carousel-counter" id="carouselCounter">1 / 7</div>
+      <div class="carousel-hint">листай ← →</div>
+    </section>
+
+    <!-- TARIFFS -->
+    <section class="tariffs" id="tariffs">
+      <p class="sec-label">✦ Тарифы ✦</p>
+      <h2 class="sec-title">Выбери свой формат</h2>
+      <p class="sec-desc">
+        Три уровня сопровождения — для разных запросов и возможностей
+      </p>
+
+      <!-- LAUNCH BANNER -->
+      <div class="launch-banner">
+        <div class="launch-badge">✦ Первый поток ✦</div>
+        <h3 class="launch-title">Особые условия <em>первого потока</em></h3>
+        <p class="launch-text">
+          Старт программы — 20 апреля. До 10 апреля действует скидка 15% на все
+          тарифы. Предоплата фиксирует цену и место в группе.
+        </p>
+        <div class="launch-deadline">
+          Условия первого потока действуют до 10 апреля 2026 г.
+        </div>
+      </div>
+
+      <div class="tariffs-grid">
+        <!-- ПРИНЦЕССА -->
+        <div class="tariff-card">
+          <h3 class="tariff-name">Принцесса</h3>
+          <p class="tariff-tagline">Программа + групповая поддержка</p>
+          <div class="tariff-divider"></div>
+          <div class="tariff-price-old">22 200 ₽</div>
+          <div class="tariff-price">18 870 ₽</div>
+          <span class="tariff-price-note">✦ цена первого потока</span>
+          <ul class="tariff-list">
+            <li>Полная программа — 11 занятий</li>
+            <li>5 Zoom-сессий в группе</li>
+            <li>6 аудио-медитаций</li>
+            <li>Доступ к материалам 123 дня</li>
+            <li>Поддержка в чате участниц</li>
+          </ul>
+          <div class="tariff-btns">
+            <a
+              href="https://julialumen.payform.ru/"
+              class="btn-gold"
+              target="_blank"
+              >Оплатить 18 870 ₽</a
+            >
+            <a
+              href="https://julialumen.payform.ru/"
+              class="btn-prepay"
+              target="_blank"
+              >Забронировать за 3 774 ₽</a
+            >
+          </div>
+        </div>
+
+        <!-- КОРОЛЕВА -->
+        <div class="tariff-card featured">
+          <div class="tariff-badge">✦ Популярный выбор ✦</div>
+          <h3 class="tariff-name">Королева</h3>
+          <p class="tariff-tagline">Программа + личная работа с Юлией</p>
+          <div class="tariff-divider"></div>
+          <div class="tariff-price-old">44 400 ₽</div>
+          <div class="tariff-price">37 740 ₽</div>
+          <span class="tariff-price-note">✦ цена первого потока</span>
+          <ul class="tariff-list">
+            <li>Всё из тарифа Принцесса</li>
+            <li>1 личная сессия с Юлией (60 мин)</li>
+            <li>Персональный разбор твоего паттерна</li>
+            <li>Индивидуальные рекомендации</li>
+            <li>Приоритетная поддержка</li>
+          </ul>
+          <div class="tariff-btns">
+            <a
+              href="https://julialumen.payform.ru/"
+              class="btn-gold"
+              target="_blank"
+              >Оплатить 37 740 ₽</a
+            >
+            <a
+              href="https://julialumen.payform.ru/"
+              class="btn-prepay"
+              target="_blank"
+              >Забронировать за 7 548 ₽</a
+            >
+          </div>
+        </div>
+
+        <!-- ИМПЕРАТРИЦА -->
+        <div class="tariff-card">
+          <h3 class="tariff-name">Императрица</h3>
+          <p class="tariff-tagline">Максимальное сопровождение</p>
+          <div class="tariff-divider"></div>
+          <div class="tariff-price-old">88 800 ₽</div>
+          <div class="tariff-price">75 480 ₽</div>
+          <span class="tariff-price-note">✦ цена первого потока</span>
+          <ul class="tariff-list">
+            <li>Всё из тарифа Королева</li>
+            <li>2 личные сессии с Юлией</li>
+            <li>
+              Закрытая встреча с женой миллиардера — живые истории, реальные
+              кейсы, окружение другого уровня
+            </li>
+            <li>
+              VIP-доступ к закрытому клубу — женщины, которые уже живут эту
+              жизнь
+            </li>
+            <li>Личное сопровождение все 123 дня</li>
+          </ul>
+          <div class="tariff-btns">
+            <a
+              href="https://julialumen.payform.ru/"
+              class="btn-gold"
+              target="_blank"
+              >Оплатить 75 480 ₽</a
+            >
+            <a
+              href="https://julialumen.payform.ru/"
+              class="btn-prepay"
+              target="_blank"
+              >Забронировать за 15 096 ₽</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- LEGAL UNDER TARIFFS -->
+      <div class="tariff-legal">
+        <p>
+          Нажимая кнопку оплаты, вы подтверждаете, что ознакомились и согласны с
+          <a href="oferta-julia.html">Публичной офертой</a> и
+          <a href="privacy-julia.html"
+            >Политикой обработки персональных данных</a
+          >. Оплата проводится через платёжный сервис Продамус с автоматической
+          отправкой электронного чека.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <p class="sec-label">✦ Вопросы ✦</p>
+      <h2 class="sec-title">Часто спрашивают</h2>
+      <div class="faq-inner">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Это терапия? Нужно ли мне быть «в кризисе»?
+          </div>
+          <div class="faq-a">
+            Нет. Это не терапия и не кризисная помощь. Программа подходит
+            женщинам, которые хотят выстроить счастливые отношения с достойным
+            мужчиной. Вы приходите не «лечиться», а трансформироваться.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Почему именно 41 день на каждую ступень?
+          </div>
+          <div class="faq-a">
+            41 день — это научно обоснованный минимум для формирования новых
+            нейронных связей и перевода их в автоматизм. Меньше — и изменения не
+            закрепляются. Именно поэтому программа устроена именно так, а не в
+            формате двухдневного интенсива.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Можно ли участвовать, если я сейчас в отношениях?
+          </div>
+          <div class="faq-a">
+            Да, и это часто даёт самые сильные результаты. Программа помогает
+            увидеть отношения ясно — без иллюзий и без страха. Некоторые
+            участницы после программы открывают в партнёре то, чего не замечали
+            раньше. Другие понимают, что пора двигаться дальше — и делают это
+            спокойно и уверенно.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Как проходят занятия? Нужно куда-то ехать?
+          </div>
+          <div class="faq-a">
+            Всё онлайн. Zoom-сессии в удобное время, аудио-медитации слушаешь
+            когда удобно. Программа рассчитана на занятых женщин — 15–20 минут в
+            день достаточно для работы между сессиями.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Что если я не увижу результата?
+          </div>
+          <div class="faq-a">
+            За 5000+ часов работы с клиентами Юлия видела трансформации у женщин
+            с самыми разными историями. Программа работает, если ты работаешь с
+            ней. На первичной консультации Юлия честно скажет, подходит ли тебе
+            этот формат.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Сколько времени занимает программа в день?
+          </div>
+          <div class="faq-a">
+            15–20 минут в день между сессиями — медитации, практики, короткие
+            задания. Zoom-встречи раз в неделю по 2–2.5 часа. Программа создана
+            для занятых женщин, которые живут полной жизнью — из любой точки
+            мира.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Что такое предоплата и зачем она нужна?
+          </div>
+          <div class="faq-a">
+            Предоплата (20% от стоимости тарифа) фиксирует за вами место в
+            группе и специальную цену первого потока. Остаток вносится до старта
+            программы 20 апреля. Если вы передумаете до старта — предоплата
+            возвращается полностью.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Можно ли вернуть деньги?
+          </div>
+          <div class="faq-a">
+            Да. Если вы решите отказаться от участия до старта программы (до 20
+            апреля) — мы вернём полную сумму, включая предоплату. После старта
+            программы и получения доступа к материалам возврат не предусмотрен,
+            так как вы получаете цифровой продукт и доступ к закрытой группе.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contact">
+      <div class="final-cta-inner">
+        <div class="final-cta-badge">✦ Следующий шаг ✦</div>
+        <h2>Готова увидеть любовь<br /><em>с открытыми глазами?</em></h2>
+        <p>
+          Запишись на консультацию — Юлия лично ответит на твои вопросы и
+          поможет выбрать подходящий формат
+        </p>
+        <div class="final-cta-btns">
+          <a href="https://t.me/JuliaEnergopraktika" class="btn-gold"
+            >Написать Юлии в Telegram</a
+          >
+          <a href="#tariffs" class="btn-light">Посмотреть тарифы</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-legal">
+        <p>
+          © 2026 Программа <span>«Любовь с открытыми глазами»</span> · Юлия
+          Люмен · Все права защищены
+        </p>
+        <p style="margin-top: 10px">
+          <a href="oferta-julia.html">Публичная оферта</a> ·
+          <a href="privacy-julia.html">Политика конфиденциальности</a>
+        </p>
+        <div class="footer-rekvizity">
+          Индивидуальный предприниматель Воробьева Юлия Олеговна<br />
+          ИНН 622800682806 · ОГРНИП 308623400900025 · г. Москва<br />
+          <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a> ·
+          <a href="https://t.me/JuliaEnergopraktika" target="_blank"
+            >Telegram: @JuliaEnergopraktika</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // FAQ
+      function toggleFaq(el) {
+        var a = el.nextElementSibling;
+        var isOpen = a.classList.contains("open");
+        document.querySelectorAll(".faq-a").forEach(function (x) {
+          x.classList.remove("open");
+        });
+        document.querySelectorAll(".faq-q").forEach(function (x) {
+          x.classList.remove("open");
+        });
+        if (!isOpen) {
+          a.classList.add("open");
+          el.classList.add("open");
+        }
+      }
+
+      // CAROUSEL
+      var current = 0;
+      var track = document.getElementById("carouselTrack");
+      var slides = track ? track.querySelectorAll(".carousel-slide") : [];
+      var total = slides.length;
+      var dotsWrap = document.getElementById("carouselDots");
+
+      if (dotsWrap && total > 0) {
+        for (var i = 0; i < total; i++) {
+          var dot = document.createElement("button");
+          dot.className = "carousel-dot" + (i === 0 ? " active" : "");
+          dot.setAttribute("aria-label", "Слайд " + (i + 1));
+          (function (idx) {
+            dot.onclick = function () {
+              goTo(idx);
+            };
+          })(i);
+          dotsWrap.appendChild(dot);
+        }
+      }
+
+      function goTo(i) {
+        current = i;
+        if (track) track.style.transform = "translateX(-" + i * 100 + "%)";
+        document.querySelectorAll(".carousel-dot").forEach(function (d, idx) {
+          d.classList.toggle("active", idx === i);
+        });
+        var counter = document.getElementById("carouselCounter");
+        if (counter) counter.textContent = i + 1 + " / " + total;
+      }
+
+      function moveSlide(dir) {
+        var next = current + dir;
+        if (next < 0) next = total - 1;
+        if (next >= total) next = 0;
+        goTo(next);
+      }
+
+      // Свайп
+      var carouselWrap = document.querySelector(".carousel-wrap");
+      var touchStartX = 0;
+      if (carouselWrap) {
+        carouselWrap.addEventListener(
+          "touchstart",
+          function (e) {
+            touchStartX = e.touches[0].clientX;
+          },
+          { passive: true }
+        );
+        carouselWrap.addEventListener(
+          "touchend",
+          function (e) {
+            var diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+              diff > 0 ? moveSlide(1) : moveSlide(-1);
+            }
+          },
+          { passive: true }
+        );
+      }
+
+      // Клавиши
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") moveSlide(-1);
+        if (e.key === "ArrowRight") moveSlide(1);
+      });
+
+      // Автопрокрутка
+      if (total > 1) {
+        setInterval(function () {
+          moveSlide(1);
+        }, 4500);
+      }
+
+      // Плавный скролл
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+          var target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // COOKIE BANNER
+      // Раскомментируй строку ниже когда подключишь Яндекс.Метрику:
+      // showCookieBanner();
+
+      function showCookieBanner() {
+        if (!localStorage.getItem("cookiesAccepted")) {
+          setTimeout(function () {
+            document.getElementById("cookieBanner").classList.add("show");
+          }, 1500);
+        }
+      }
+
+      function acceptCookies() {
+        localStorage.setItem("cookiesAccepted", "1");
+        document.getElementById("cookieBanner").classList.remove("show");
+      }
+    </script>
+  </body>
+</html>
