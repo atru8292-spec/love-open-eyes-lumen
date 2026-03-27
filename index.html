@@ -29,7 +29,6 @@
         "https://mc.yandex.ru/metrika/tag.js?id=108267269",
         "ym"
       );
-
       ym(108267269, "init", {
         ssr: true,
         webvisor: true,
@@ -95,7 +94,6 @@
         display: block;
       }
 
-      /* NAV */
       nav {
         position: fixed;
         top: 0;
@@ -134,7 +132,6 @@
         color: var(--gold);
       }
 
-      /* BUTTONS */
       .btn-gold {
         background: linear-gradient(
           135deg,
@@ -198,7 +195,6 @@
         color: var(--gold);
       }
 
-      /* HERO */
       .hero {
         min-height: 100vh;
         display: flex;
@@ -265,7 +261,6 @@
         flex-wrap: wrap;
       }
 
-      /* COMMONS */
       .sec-label {
         text-align: center;
         color: var(--gold);
@@ -301,7 +296,6 @@
         color: rgba(255, 255, 255, 0.6);
       }
 
-      /* FOR WHOM */
       .forwhom {
         background: var(--cream);
         padding: 110px 20px;
@@ -347,9 +341,8 @@
         font-weight: 400;
       }
 
-      /* PROGRAM */
       .program {
-        background: linear-gradient(160deg, #111111 0%, #2a1f10 100%);
+        background: linear-gradient(160deg, #111 0%, #2a1f10 100%);
         padding: 110px 20px;
       }
       .program-container {
@@ -465,6 +458,21 @@
         line-height: 1.85;
         font-weight: 400;
       }
+      .step-locked {
+        margin-top: 16px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(201, 168, 76, 0.15);
+        padding: 8px 18px;
+        border-radius: 50px;
+        font-size: 0.62rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 500;
+      }
       .format-strip {
         display: flex;
         flex-wrap: wrap;
@@ -499,7 +507,6 @@
         font-weight: 500;
       }
 
-      /* WHAT YOU GET */
       .whatget {
         background: var(--cream2);
         padding: 110px 20px;
@@ -543,7 +550,6 @@
         font-weight: 400;
       }
 
-      /* CASES */
       .cases {
         background: linear-gradient(135deg, #fdfbf8 0%, #f2e8db 100%);
         padding: 110px 20px;
@@ -751,9 +757,8 @@
         line-height: 1;
       }
 
-      /* ABOUT */
       .about {
-        background: linear-gradient(160deg, #111111 0%, #2a1f10 100%);
+        background: linear-gradient(160deg, #111 0%, #2a1f10 100%);
         padding: 110px 20px;
       }
       .about-inner {
@@ -848,7 +853,6 @@
         line-height: 1.5;
       }
 
-      /* TESTIMONIALS */
       .testimonials {
         background: var(--dark);
         padding: 110px 20px;
@@ -958,7 +962,6 @@
         font-weight: 400;
       }
 
-      /* TARIFFS */
       .tariffs {
         background: var(--cream);
         padding: 110px 20px;
@@ -1034,18 +1037,6 @@
       }
       .tariff-card.featured .tariff-divider {
         background: rgba(201, 168, 76, 0.15);
-      }
-      .tariff-price-old {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 1.6rem;
-        color: #aaa;
-        text-decoration: line-through;
-        font-weight: 400;
-        line-height: 1;
-        margin-bottom: 4px;
-      }
-      .tariff-card.featured .tariff-price-old {
-        color: rgba(255, 255, 255, 0.35);
       }
       .tariff-price {
         font-family: "Cormorant Garamond", serif;
@@ -1130,7 +1121,6 @@
         background: rgba(201, 168, 76, 0.12);
       }
 
-      /* LAUNCH BANNER */
       .launch-banner {
         max-width: 1040px;
         margin: 0 auto 50px;
@@ -1196,7 +1186,6 @@
         position: relative;
       }
 
-      /* TARIFF LEGAL */
       .tariff-legal {
         max-width: 1040px;
         margin: 40px auto 0;
@@ -1215,7 +1204,136 @@
         color: var(--gold-dark);
       }
 
-      /* FAQ */
+      /* VIP BLOCK */
+      .vip-block {
+        max-width: 1040px;
+        margin: 60px auto 0;
+        background: linear-gradient(160deg, #111 0%, #2d2417 100%);
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        padding: 60px 44px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .vip-block::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 0%,
+          rgba(201, 168, 76, 0.08) 0%,
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+      .vip-star {
+        font-size: 0.65rem;
+        letter-spacing: 3px;
+        color: var(--gold);
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 20px;
+        display: block;
+        position: relative;
+      }
+      .vip-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        color: var(--white);
+        font-weight: 400;
+        margin-bottom: 8px;
+        line-height: 1.15;
+        position: relative;
+      }
+      .vip-title em {
+        color: var(--gold);
+        font-style: italic;
+        font-weight: 600;
+      }
+      .vip-sub {
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.8;
+        max-width: 560px;
+        margin: 0 auto 36px;
+        font-weight: 400;
+        position: relative;
+      }
+      .vip-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2px;
+        max-width: 700px;
+        margin: 0 auto 36px;
+        text-align: left;
+      }
+      .vip-feature {
+        border: 1px solid rgba(201, 168, 76, 0.12);
+        padding: 22px 24px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .vip-feature-icon {
+        color: var(--gold);
+        font-size: 0.5rem;
+        flex-shrink: 0;
+        margin-top: 6px;
+      }
+      .vip-feature-text {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.7;
+        font-weight: 400;
+      }
+      .vip-price {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3.2rem;
+        color: var(--gold);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 6px;
+        position: relative;
+      }
+      .vip-price-note {
+        font-size: 0.65rem;
+        color: rgba(255, 255, 255, 0.4);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .vip-access {
+        font-size: 0.78rem;
+        color: rgba(201, 168, 76, 0.7);
+        font-style: italic;
+        margin-bottom: 28px;
+        display: block;
+        position: relative;
+      }
+      .btn-vip {
+        background: transparent;
+        color: var(--gold);
+        padding: 17px 46px;
+        border: 1px solid var(--gold);
+        font-size: 0.73rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+      }
+      .btn-vip:hover {
+        background: var(--gold);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 35px rgba(201, 168, 76, 0.3);
+      }
+
       .faq {
         background: var(--cream2);
         padding: 110px 20px;
@@ -1263,9 +1381,8 @@
         padding-bottom: 24px;
       }
 
-      /* FINAL CTA */
       .final-cta {
-        background: linear-gradient(160deg, #111111 0%, #2a1f10 100%);
+        background: linear-gradient(160deg, #111 0%, #2a1f10 100%);
         padding: 120px 20px;
         text-align: center;
         position: relative;
@@ -1325,16 +1442,7 @@
         justify-content: center;
         flex-wrap: wrap;
       }
-      .final-cta-note {
-        margin-top: 24px;
-        font-size: 0.7rem;
-        color: rgba(255, 255, 255, 0.35);
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        font-weight: 400;
-      }
 
-      /* FOOTER */
       footer {
         background: #0d0d0d;
         padding: 36px 30px 28px;
@@ -1379,7 +1487,6 @@
         color: rgba(201, 168, 76, 0.5);
       }
 
-      /* FLOAT TG */
       .float-btn {
         position: fixed;
         bottom: 28px;
@@ -1405,7 +1512,6 @@
         fill: #fff;
       }
 
-      /* COOKIE BANNER */
       .cookie-banner {
         position: fixed;
         bottom: 0;
@@ -1455,7 +1561,6 @@
         background: var(--gold-dark);
       }
 
-      /* MOBILE */
       @media (max-width: 768px) {
         nav {
           padding: 12px 16px;
@@ -1557,9 +1662,6 @@
         .tariff-divider {
           margin: 10px 0 !important;
         }
-        .tariff-price-old {
-          font-size: 0.85rem !important;
-        }
         .tariff-price {
           font-size: 1.3rem !important;
           margin-bottom: 4px !important;
@@ -1597,6 +1699,24 @@
           font-size: 0.55rem;
           padding: 0 16px;
         }
+        .vip-block {
+          margin-left: 16px;
+          margin-right: 16px;
+          padding: 36px 20px;
+        }
+        .vip-title {
+          font-size: 1.5rem;
+        }
+        .vip-features {
+          grid-template-columns: 1fr;
+        }
+        .vip-price {
+          font-size: 2.4rem;
+        }
+        .btn-vip {
+          padding: 14px 28px;
+          font-size: 0.65rem;
+        }
         .cookie-banner {
           flex-direction: column;
           gap: 12px;
@@ -1620,7 +1740,7 @@
       </svg>
     </a>
 
-    <!-- COOKIE BANNER (скрыт до подключения Метрики) -->
+    <!-- COOKIE BANNER -->
     <div class="cookie-banner" id="cookieBanner">
       <p>
         Мы используем файлы cookie и сервисы аналитики для улучшения работы
@@ -1728,6 +1848,7 @@
           </p>
         </div>
         <div class="steps-grid">
+          <!-- СТУПЕНЬ 1 — АКТИВНА -->
           <div class="step-card">
             <div class="step-days">Ступень 1 · Дни 1–41</div>
             <div class="step-num">1</div>
@@ -1742,6 +1863,7 @@
               прошлого
             </div>
           </div>
+          <!-- СТУПЕНЬ 2 — СКОРО -->
           <div class="step-card">
             <div class="step-days">Ступень 2 · Дни 42–82</div>
             <div class="step-num">2</div>
@@ -1755,7 +1877,11 @@
               Ты уверена в себе, смело остаёшься собой и строишь отношения на
               своих условиях
             </div>
+            <div class="step-locked">
+              🔒 Открывается после завершения 1-й ступени
+            </div>
           </div>
+          <!-- СТУПЕНЬ 3 — СКОРО -->
           <div class="step-card">
             <div class="step-days">Ступень 3 · Дни 83–123</div>
             <div class="step-num">3</div>
@@ -1768,6 +1894,9 @@
             <div class="step-result">
               Ты выбираешь не тревогу — ты выбираешь любовь. И достойный мужчина
               это чувствует
+            </div>
+            <div class="step-locked">
+              🔒 Открывается после завершения 2-й ступени
             </div>
           </div>
         </div>
@@ -1854,7 +1983,7 @@
     <!-- EXPERT BRIDGE -->
     <section
       style="
-        background: linear-gradient(160deg, #111111 0%, #2a1f10 100%);
+        background: linear-gradient(160deg, #111 0%, #2a1f10 100%);
         padding: 90px 20px;
       "
     >
@@ -1887,12 +2016,11 @@
         >
           Психология объясняет,
           <strong style="color: var(--gold-light)">что</strong> с тобой
-          происходит.<br />
-          Коучинг говорит,
-          <strong style="color: var(--gold-light)">что делать</strong>.<br />
-          Но ни то, ни другое не меняет нейронный паттерн — программу, которая
-          запускается автоматически, до того как ты успеваешь подумать.<br /><br />
-          Мой метод работает на уровне
+          происходит.<br />Коучинг говорит,
+          <strong style="color: var(--gold-light)">что делать</strong>.<br />Но
+          ни то, ни другое не меняет нейронный паттерн — программу, которая
+          запускается автоматически, до того как ты успеваешь подумать.<br /><br />Мой
+          метод работает на уровне
           <strong style="color: var(--gold-light)">нейронных связей</strong> —
           там, где формируется сам механизм выбора. Не «что делать» — а «кем ты
           становишься». И это уже не отменить.
@@ -2257,9 +2385,10 @@
           <h3 class="tariff-name">Принцесса</h3>
           <p class="tariff-tagline">Программа + групповая поддержка</p>
           <div class="tariff-divider"></div>
-          <div class="tariff-price-old">22 200 ₽</div>
-          <div class="tariff-price">18 870 ₽</div>
-          <span class="tariff-price-note">✦ цена первого потока</span>
+          <div class="tariff-price">22 200 ₽</div>
+          <span class="tariff-price-note"
+            >✦ цена первого потока · скидка 15%</span
+          >
           <ul class="tariff-list">
             <li>Полная программа — 11 занятий</li>
             <li>5 Zoom-сессий в группе</li>
@@ -2269,16 +2398,16 @@
           </ul>
           <div class="tariff-btns">
             <a
-              href="https://julialumen.payform.ru/"
+              href="https://payform.ru/4qaK55H/"
               class="btn-gold"
               target="_blank"
-              >Оплатить 18 870 ₽</a
+              >Оплатить полностью</a
             >
             <a
-              href="https://julialumen.payform.ru/"
+              href="https://payform.ru/4vb42lT/"
               class="btn-prepay"
               target="_blank"
-              >Забронировать за 3 774 ₽</a
+              >Забронировать место со скидкой · по предоплате</a
             >
           </div>
         </div>
@@ -2289,9 +2418,10 @@
           <h3 class="tariff-name">Королева</h3>
           <p class="tariff-tagline">Программа + личная работа с Юлией</p>
           <div class="tariff-divider"></div>
-          <div class="tariff-price-old">44 400 ₽</div>
-          <div class="tariff-price">37 740 ₽</div>
-          <span class="tariff-price-note">✦ цена первого потока</span>
+          <div class="tariff-price">44 400 ₽</div>
+          <span class="tariff-price-note"
+            >✦ цена первого потока · скидка 15%</span
+          >
           <ul class="tariff-list">
             <li>Всё из тарифа Принцесса</li>
             <li>1 личная сессия с Юлией (60 мин)</li>
@@ -2301,16 +2431,16 @@
           </ul>
           <div class="tariff-btns">
             <a
-              href="https://julialumen.payform.ru/"
+              href="https://payform.ru/cbaK5bV/"
               class="btn-gold"
               target="_blank"
-              >Оплатить 37 740 ₽</a
+              >Оплатить полностью</a
             >
             <a
-              href="https://julialumen.payform.ru/"
+              href="https://payform.ru/8nb42pF/"
               class="btn-prepay"
               target="_blank"
-              >Забронировать за 7 548 ₽</a
+              >Забронировать место со скидкой · по предоплате</a
             >
           </div>
         </div>
@@ -2320,12 +2450,13 @@
           <h3 class="tariff-name">Императрица</h3>
           <p class="tariff-tagline">Максимальное сопровождение</p>
           <div class="tariff-divider"></div>
-          <div class="tariff-price-old">88 800 ₽</div>
-          <div class="tariff-price">75 480 ₽</div>
-          <span class="tariff-price-note">✦ цена первого потока</span>
+          <div class="tariff-price">88 800 ₽</div>
+          <span class="tariff-price-note"
+            >✦ цена первого потока · скидка 15%</span
+          >
           <ul class="tariff-list">
             <li>Всё из тарифа Королева</li>
-            <li>2 личные сессии с Юлией</li>
+            <li>2 личные сессии с Юлией (90 минут)</li>
             <li>
               Закрытая встреча с женой миллиардера — живые истории, реальные
               кейсы, окружение другого уровня
@@ -2338,16 +2469,16 @@
           </ul>
           <div class="tariff-btns">
             <a
-              href="https://julialumen.payform.ru/"
+              href="https://payform.ru/gmaK5ee/"
               class="btn-gold"
               target="_blank"
-              >Оплатить 75 480 ₽</a
+              >Оплатить полностью</a
             >
             <a
-              href="https://julialumen.payform.ru/"
+              href="https://payform.ru/egb42sK/"
               class="btn-prepay"
               target="_blank"
-              >Забронировать за 15 096 ₽</a
+              >Забронировать место со скидкой · по предоплате</a
             >
           </div>
         </div>
@@ -2363,6 +2494,49 @@
           >. Оплата проводится через платёжный сервис Продамус с автоматической
           отправкой электронного чека.
         </p>
+      </div>
+
+      <!-- VIP — ПЕРСОНАЛЬНОЕ СОПРОВОЖДЕНИЕ -->
+      <div class="vip-block">
+        <span class="vip-star">★ Персональное сопровождение ★</span>
+        <h3 class="vip-title">Личная работа <em>со мной</em></h3>
+        <p class="vip-sub">
+          Максимально индивидуальный формат для тех, кто хочет пройти
+          трансформацию с постоянной поддержкой эксперта
+        </p>
+        <div class="vip-features">
+          <div class="vip-feature">
+            <span class="vip-feature-icon">✦</span
+            ><span class="vip-feature-text"
+              >Еженедельные разборы твоих ситуаций</span
+            >
+          </div>
+          <div class="vip-feature">
+            <span class="vip-feature-icon">✦</span
+            ><span class="vip-feature-text">Постоянная связь в Telegram</span>
+          </div>
+          <div class="vip-feature">
+            <span class="vip-feature-icon">✦</span
+            ><span class="vip-feature-text"
+              >Личные сессии 1,5 часа — 2 раза в месяц</span
+            >
+          </div>
+          <div class="vip-feature">
+            <span class="vip-feature-icon">✦</span
+            ><span class="vip-feature-text">3 месяца персональной работы</span>
+          </div>
+        </div>
+        <div class="vip-price">150 000 ₽</div>
+        <span class="vip-price-note">3 месяца персональной работы</span>
+        <span class="vip-access"
+          >Доступно только после предварительного разбора ситуации</span
+        >
+        <a
+          href="https://t.me/JuliaEnergopraktika"
+          class="btn-vip"
+          target="_blank"
+          >Записаться на разбор</a
+        >
       </div>
     </section>
 
@@ -2441,10 +2615,9 @@
             Что такое предоплата и зачем она нужна?
           </div>
           <div class="faq-a">
-            Предоплата (20% от стоимости тарифа) фиксирует за вами место в
-            группе и специальную цену первого потока. Остаток вносится до старта
-            программы 20 апреля. Если вы передумаете до старта — предоплата
-            возвращается полностью.
+            Предоплата фиксирует за вами место в группе и специальную цену
+            первого потока. Остаток вносится до старта программы 20 апреля. Если
+            вы передумаете до старта — предоплата возвращается полностью.
           </div>
         </div>
         <div class="faq-item">
@@ -2460,7 +2633,6 @@
         </div>
       </div>
     </section>
-
     <!-- FINAL CTA -->
     <section class="final-cta" id="contact">
       <div class="final-cta-inner">
@@ -2603,9 +2775,8 @@
         });
       });
 
-      // Яндекс.Метрика подключена:
+      // Cookie banner
       showCookieBanner();
-
       function showCookieBanner() {
         if (!localStorage.getItem("cookiesAccepted")) {
           setTimeout(function () {
@@ -2613,7 +2784,6 @@
           }, 1500);
         }
       }
-
       function acceptCookies() {
         localStorage.setItem("cookiesAccepted", "1");
         document.getElementById("cookieBanner").classList.remove("show");
