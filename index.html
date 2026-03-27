@@ -1724,9 +1724,157 @@
           text-align: center;
         }
       }
+      /* PRELOADER */
+      .preloader {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(160deg, #0d0d0d 0%, #2a1f10 100%);
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+      }
+      .preloader.hide {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .preloader-star {
+        font-size: 2.6rem;
+        color: var(--gold);
+        opacity: 0;
+        animation: preStar 1.2s ease 0.2s forwards,
+          preHeartbeat 1.2s ease-in-out 1.4s infinite;
+      }
+      .preloader-main {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        color: var(--white);
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.15;
+        margin-top: 24px;
+        opacity: 0;
+        animation: preUp 0.8s ease 0.6s forwards;
+        transform: translateY(16px);
+      }
+      .preloader-main em {
+        color: var(--gold);
+        font-style: italic;
+        font-weight: 600;
+        display: block;
+        margin-top: 4px;
+      }
+      .preloader-sub {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(0.9rem, 2.2vw, 1.15rem);
+        color: rgba(201, 168, 76, 0.6);
+        font-style: italic;
+        text-align: center;
+        margin-top: 18px;
+        opacity: 0;
+        animation: preUp 0.8s ease 1.2s forwards;
+        letter-spacing: 0.5px;
+        transform: translateY(16px);
+      }
+      .preloader-line {
+        width: 100px;
+        height: 1px;
+        background: rgba(201, 168, 76, 0.12);
+        margin-top: 32px;
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+        animation: preUp 0.6s ease 1.6s forwards;
+        transform: translateY(16px);
+      }
+      .preloader-line::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+        animation: preScan 1.4s ease-in-out infinite;
+      }
+      @keyframes preStar {
+        0% {
+          opacity: 0;
+          transform: scale(0.3);
+        }
+        15% {
+          opacity: 1;
+          transform: scale(1.25);
+        }
+        30% {
+          transform: scale(0.9);
+        }
+        45% {
+          transform: scale(1.15);
+        }
+        60% {
+          transform: scale(0.95);
+        }
+        75% {
+          transform: scale(1.05);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes preHeartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        15% {
+          transform: scale(1.15);
+        }
+        30% {
+          transform: scale(1);
+        }
+        45% {
+          transform: scale(1.1);
+        }
+        60% {
+          transform: scale(1);
+        }
+      }
+      @keyframes preUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes preScan {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 200%;
+        }
+      }
     </style>
   </head>
   <body>
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-star">♡</div>
+      <div class="preloader-main">
+        Любовь с открытыми глазами<em>начинается с любви к себе</em>
+      </div>
+      <div class="preloader-sub">Программа Юлии Люмен</div>
+      <div class="preloader-line"></div>
+    </div>
     <!-- FLOAT TG -->
     <a
       href="https://t.me/JuliaEnergopraktika"
@@ -1769,12 +1917,13 @@
         <div class="hero-badge">✦ Программа-тренинг · Нейропсихология ✦</div>
         <h1>Любовь<em>с открытыми глазами</em></h1>
         <p class="hero-sub">
-          Программа для женщины, которая хочет счастливый брак с достойным
-          мужчиной
+          Программа для женщины, которая готова полюбить себя — и встретить
+          достойного мужчину
         </p>
         <p class="hero-desc">
-          41 день · 3 ступени · Нейропсихологический протокол<br />Меняем не
-          мужчину — меняем то, что внутри.<br />И мужчины это видят сами.
+          41 день · 3 ступени · Нейропсихологический протокол<br />
+          Сначала ты увидишь, насколько ты прекрасна.<br />
+          Потом это увидят все — особенно мужчины.
         </p>
         <div class="hero-btns">
           <a href="#tariffs" class="btn-gold">Выбрать тариф</a>
@@ -1823,6 +1972,14 @@
             <p>
               Чувствуешь, что отношения зашли в тупик. Нет близости, нет
               понимания, нет искры. Ты заслуживаешь большего — и знаешь это.
+            </p>
+          </div>
+          <div class="forwhom-card">
+            <span class="forwhom-num">05</span>
+            <h4>Не чувствуешь свою ценность</h4>
+            <p>
+              Умом понимаешь, что достойна лучшего. Но внутри — сомнения и
+              самокритика. Программа меняет это на глубинном уровне.
             </p>
           </div>
         </div>
@@ -2788,6 +2945,16 @@
         localStorage.setItem("cookiesAccepted", "1");
         document.getElementById("cookieBanner").classList.remove("show");
       }
+      // Preloader
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.getElementById("preloader").classList.add("hide");
+        }, 2400);
+        setTimeout(function () {
+          var p = document.getElementById("preloader");
+          if (p) p.remove();
+        }, 3200);
+      });
     </script>
   </body>
 </html>
