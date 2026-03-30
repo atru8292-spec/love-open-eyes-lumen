@@ -3,173 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Политика конфиденциальности — Юлия Люмен</title>
+    <title>Согласие на рекламную рассылку — Юлия Люмен</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       :root {
-        --gold: #c9a84c;
-        --gold-light: #e8d5a3;
-        --gold-dark: #8b6914;
-        --cream: #fbf7f0;
-        --dark: #1a1a1a;
-        --text: #3d3d3d;
-        --white: #ffffff;
+        --gold: #c9a84c; --gold-light: #e8d5a3; --gold-dark: #8b6914;
+        --cream: #fbf7f0; --dark: #1a1a1a; --text: #3d3d3d; --white: #ffffff;
       }
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
       body {
-        font-family: "Montserrat", sans-serif;
-        background: var(--cream);
-        color: var(--text);
-        font-size: 15px;
-        line-height: 1.85;
-        font-weight: 400;
+        font-family: "Montserrat", sans-serif; background: var(--cream);
+        color: var(--text); font-size: 15px; line-height: 1.85; font-weight: 400;
       }
-      h1,
-      h2,
-      h3 {
-        font-family: "Cormorant Garamond", serif;
-      }
-
-      /* NAV */
+      h1, h2, h3 { font-family: "Cormorant Garamond", serif; }
       .doc-nav {
-        background: rgba(251, 247, 240, 0.97);
-        backdrop-filter: blur(12px);
-        padding: 14px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid var(--gold-light);
+        background: rgba(251, 247, 240, 0.97); backdrop-filter: blur(12px);
+        padding: 14px 40px; display: flex; justify-content: space-between;
+        align-items: center; border-bottom: 1px solid var(--gold-light);
       }
       .doc-nav-logo {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 1rem;
-        color: var(--gold-dark);
-        letter-spacing: 2px;
-        text-transform: uppercase;
+        font-family: "Cormorant Garamond", serif; font-size: 1rem;
+        color: var(--gold-dark); letter-spacing: 2px; text-transform: uppercase;
         text-decoration: none;
       }
       .doc-nav-back {
-        font-size: 0.7rem;
-        color: var(--gold);
-        text-decoration: none;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: 500;
+        font-size: 0.7rem; color: var(--gold); text-decoration: none;
+        letter-spacing: 1px; text-transform: uppercase; font-weight: 500;
         transition: color 0.3s;
       }
-      .doc-nav-back:hover {
-        color: var(--gold-dark);
-      }
-
-      /* CONTENT */
-      .doc-wrap {
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 60px 24px 80px;
-      }
+      .doc-nav-back:hover { color: var(--gold-dark); }
+      .doc-wrap { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
       .doc-badge {
-        display: inline-block;
-        border: 1px solid rgba(201, 168, 76, 0.4);
-        color: var(--gold);
-        padding: 6px 18px;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 0.72rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 24px;
+        display: inline-block; border: 1px solid rgba(201, 168, 76, 0.4);
+        color: var(--gold); padding: 6px 18px;
+        font-family: "Cormorant Garamond", serif; font-size: 0.72rem;
+        letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px;
       }
       .doc-title {
-        font-size: clamp(2rem, 5vw, 3rem);
-        color: var(--dark);
-        font-weight: 400;
-        margin-bottom: 8px;
-        line-height: 1.15;
+        font-size: clamp(2rem, 5vw, 3rem); color: var(--dark); font-weight: 400;
+        margin-bottom: 8px; line-height: 1.15;
       }
       .doc-date {
-        font-size: 0.72rem;
-        color: #999;
-        letter-spacing: 1px;
-        margin-bottom: 40px;
-        display: block;
+        font-size: 0.72rem; color: #999; letter-spacing: 1px;
+        margin-bottom: 40px; display: block;
       }
-      .doc-section {
-        margin-bottom: 36px;
-      }
+      .doc-section { margin-bottom: 36px; }
       .doc-section h2 {
-        font-size: 1.4rem;
-        color: var(--dark);
-        font-weight: 500;
-        margin-bottom: 14px;
-        padding-bottom: 8px;
+        font-size: 1.4rem; color: var(--dark); font-weight: 500;
+        margin-bottom: 14px; padding-bottom: 8px;
         border-bottom: 1px solid rgba(201, 168, 76, 0.15);
       }
-      .doc-section h3 {
-        font-size: 1.1rem;
-        color: var(--dark);
-        font-weight: 500;
-        margin: 20px 0 10px;
-      }
-      .doc-section p {
-        margin-bottom: 12px;
-        color: #555;
-      }
-      .doc-section ul {
-        margin: 8px 0 16px 20px;
-        color: #555;
-      }
-      .doc-section ul li {
-        margin-bottom: 6px;
-        line-height: 1.75;
-      }
+      .doc-section p { margin-bottom: 12px; color: #555; }
+      .doc-section ul { margin: 8px 0 16px 20px; color: #555; }
+      .doc-section ul li { margin-bottom: 6px; line-height: 1.75; }
       .doc-section a {
-        color: var(--gold-dark);
-        text-decoration: underline;
+        color: var(--gold-dark); text-decoration: underline;
         text-underline-offset: 2px;
       }
-
-      /* FOOTER */
       .doc-footer {
-        background: #0d0d0d;
-        padding: 30px;
-        text-align: center;
+        background: #0d0d0d; padding: 30px; text-align: center;
         border-top: 1px solid rgba(201, 168, 76, 0.1);
       }
-      .doc-footer p {
-        color: rgba(255, 255, 255, 0.3);
-        font-size: 0.65rem;
-        line-height: 1.8;
-      }
-      .doc-footer a {
-        color: rgba(201, 168, 76, 0.5);
-        text-decoration: none;
-      }
-      .doc-footer a:hover {
-        color: var(--gold);
-      }
-      .doc-footer span {
-        color: rgba(201, 168, 76, 0.5);
-      }
-
+      .doc-footer p { color: rgba(255, 255, 255, 0.3); font-size: 0.65rem; line-height: 1.8; }
+      .doc-footer a { color: rgba(201, 168, 76, 0.5); text-decoration: none; }
+      .doc-footer a:hover { color: var(--gold); }
+      .doc-footer span { color: rgba(201, 168, 76, 0.5); }
       @media (max-width: 640px) {
-        .doc-nav {
-          padding: 12px 16px;
-        }
-        .doc-wrap {
-          padding: 40px 16px 60px;
-        }
-        .doc-title {
-          font-size: 1.8rem;
-        }
+        .doc-nav { padding: 12px 16px; }
+        .doc-wrap { padding: 40px 16px 60px; }
+        .doc-title { font-size: 1.8rem; }
       }
     </style>
   </head>
@@ -181,274 +87,143 @@
 
     <div class="doc-wrap">
       <div class="doc-badge">✦ Документ ✦</div>
-      <h1 class="doc-title">Политика обработки персональных данных</h1>
+      <h1 class="doc-title">Согласие на получение рекламной рассылки</h1>
       <span class="doc-date">Редакция от 1 апреля 2026 г.</span>
 
       <div class="doc-section">
-        <h2>1. Общие положения</h2>
+        <h2>1. Рекламораспространитель</h2>
         <p>
-          Настоящая Политика обработки персональных данных (далее — «Политика»)
-          определяет порядок сбора, хранения, обработки и защиты персональных
-          данных пользователей сайта и связанных сервисов (далее — «Сайт»).
-        </p>
-        <p>Оператор персональных данных:</p>
-        <ul>
-          <li>Индивидуальный предприниматель Воробьева Юлия Олеговна</li>
-          <li>ИНН: 622800682806</li>
-          <li>ОГРНИП: 308623400900025</li>
-          <li>Адрес: г. Москва</li>
-          <li>
-            Email: <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a>
-          </li>
-          <li>
-            Telegram:
-            <a href="https://t.me/JuliaEnergopraktika" target="_blank"
-              >@JuliaEnergopraktika</a
-            >
-          </li>
-        </ul>
-        <p>
-          Используя Сайт, вы выражаете согласие с условиями настоящей Политики.
-          Если вы не согласны — пожалуйста, покиньте Сайт.
+          Индивидуальный предприниматель Воробьева Юлия Олеговна<br />
+          ИНН: 622800682806<br />
+          ОГРНИП: 308623400900025<br />
+          Адрес: г. Рязань<br />
+          Telegram: <a href="https://t.me/JuliaEnergopraktika" target="_blank">@JuliaEnergopraktika</a><br />
+          Email: <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a>
         </p>
       </div>
 
       <div class="doc-section">
-        <h2>2. Какие данные мы собираем</h2>
-        <p>Мы можем собирать следующие категории персональных данных:</p>
+        <h2>2. Предмет согласия</h2>
+        <p>
+          Нажимая кнопку «Согласна на рассылку» в Telegram-боте, вы даёте своё
+          добровольное, конкретное, информированное и сознательное согласие
+          на получение рекламных и информационных сообщений от ИП Воробьевой
+          Юлии Олеговны в соответствии с п. 1 ст. 18 Федерального закона
+          от 13.03.2006 № 38-ФЗ «О рекламе».
+        </p>
+      </div>
+
+      <div class="doc-section">
+        <h2>3. Канал рассылки</h2>
+        <p>Рассылка осуществляется посредством:</p>
         <ul>
-          <li>
-            <strong>Идентификационные данные:</strong> имя (или псевдоним),
-            фамилия, Telegram-ник
-          </li>
-          <li>
-            <strong>Контактные данные:</strong> адрес электронной почты, номер
-            телефона
-          </li>
-          <li>
-            <strong>Данные об оплате:</strong> факт и сумма оплаты, дата
-            транзакции. Полные данные банковской карты нами не собираются и не
-            хранятся — их обрабатывает платёжный сервис
-          </li>
-          <li>
-            <strong>Технические данные:</strong> IP-адрес, тип браузера, тип
-            устройства, данные файлов cookie, данные сервисов аналитики
-          </li>
+          <li>Сообщений в Telegram-боте</li>
+          <li>Сообщений в закрытых Telegram-каналах и чатах (при наличии доступа)</li>
+        </ul>
+      </div>
+
+           <div class="doc-section">
+        <h2>4. Содержание рассылки</h2>
+        <p>Рассылка может включать:</p>
+        <ul>
+          <li>Полезные материалы: статьи, видео, аудио-практики по теме отношений и психологии</li>
+          <li>Персональные разборы по результатам квиза</li>
+          <li>Информацию о программе «Любовь с открытыми глазами» (описание, тарифы, условия участия)</li>
+          <li>Анонсы мероприятий: Zoom-сессий, вебинаров, прямых эфиров</li>
+          <li>Специальные предложения и акции</li>
+          <li>Истории и отзывы участниц программы</li>
         </ul>
       </div>
 
       <div class="doc-section">
-        <h2>3. Цели обработки данных</h2>
-        <p>Персональные данные обрабатываются для следующих целей:</p>
-        <ul>
-          <li>Оформление участия в программе «Любовь с открытыми глазами»</li>
-          <li>
-            Предоставление доступа к материалам программы (закрытый
-            Telegram-канал, Zoom-встречи)
-          </li>
-          <li>Связь с вами по вопросам программы и поддержки</li>
-          <li>
-            Отправка сервисных уведомлений (напоминания о занятиях,
-            организационные сообщения)
-          </li>
-          <li>Приём и обработка оплаты</li>
-          <li>
-            Улучшение работы Сайта на основе обезличенных аналитических данных
-          </li>
-          <li>Исполнение обязательств по законодательству РФ</li>
-        </ul>
+        <h2>5. Частота рассылки</h2>
+        <p>
+          Рассылка осуществляется не чаще 3 (трёх) сообщений в день.
+          Средняя частота — 1–2 сообщения в день в период активной воронки
+          и не чаще 3 сообщений в неделю в остальное время.
+        </p>
       </div>
 
       <div class="doc-section">
-        <h2>4. Правовое основание обработки</h2>
-        <p>Обработка персональных данных осуществляется на основании:</p>
-        <ul>
-          <li>
-            Вашего добровольного согласия (вы сами вводите данные и нажимаете
-            кнопку оплаты/отправки)
-          </li>
-          <li>
-            Исполнения договора (Публичной оферты) — для предоставления
-            оплаченных услуг
-          </li>
-          <li>
-            Требований законодательства РФ (бухгалтерский и налоговый учёт)
-          </li>
-        </ul>
+        <h2>6. Срок действия согласия</h2>
+        <p>
+          Согласие действует с момента нажатия кнопки «Согласна на рассылку»
+          в Telegram-боте и до момента его отзыва.
+        </p>
+        <p>
+          Если вы не взаимодействуете с ботом более 12 (двенадцати) месяцев,
+          рассылка прекращается автоматически.
+        </p>
       </div>
 
       <div class="doc-section">
-        <h2>5. Кому мы передаём данные</h2>
+        <h2>7. Отказ от рассылки</h2>
         <p>
-          Мы не продаём и не передаём ваши персональные данные третьим лицам, за
-          исключением:
+          Вы можете отказаться от получения рассылки в любой момент любым
+          из следующих способов:
         </p>
         <ul>
-          <li>
-            <strong>Платёжный сервис Продамус (Prodamus)</strong> — для приёма и
-            обработки оплаты, формирования электронных чеков
-          </li>
-          <li>
-            <strong>Яндекс.Метрика</strong> — для сбора обезличенной статистики
-            посещений и улучшения Сайта
-          </li>
-          <li>
-            <strong>Telegram</strong> — для предоставления доступа к закрытому
-            каналу и боту
-          </li>
-          <li>
-            <strong>Zoom</strong> — для проведения групповых и индивидуальных
-            сессий
-          </li>
-          <li>
-            <strong>Государственные органы</strong> — по их законному запросу, в
-            случаях предусмотренных законодательством РФ
-          </li>
-        </ul>
-      </div>
-
-      <div class="doc-section">
-        <h2>6. Файлы cookie</h2>
-        <p>
-          Сайт использует файлы cookie — небольшие текстовые файлы, которые
-          сохраняются на вашем устройстве при посещении Сайта.
-        </p>
-
-        <h3>Какие cookie мы используем:</h3>
-        <ul>
-          <li>
-            <strong>Необходимые:</strong> для корректной работы Сайта
-            (запоминание согласия с cookie, состояние сессии)
-          </li>
-          <li>
-            <strong>Аналитические (Яндекс.Метрика):</strong> для сбора
-            обезличенной статистики — какие страницы посещаются, откуда приходят
-            пользователи, как взаимодействуют с Сайтом. ID счётчика: 108210263
-          </li>
-        </ul>
-
-        <h3>Как управлять cookie:</h3>
-        <p>
-          Вы можете отключить cookie в настройках вашего браузера. Обратите
-          внимание: отключение cookie может повлиять на работу Сайта.
-        </p>
-        <ul>
-          <li>
-            <a
-              href="https://support.google.com/chrome/answer/95647"
-              target="_blank"
-              >Google Chrome</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://support.mozilla.org/ru/kb/udalenie-kukov-i-dannyh-sajtov-v-firefox"
-              target="_blank"
-              >Mozilla Firefox</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://support.apple.com/ru-ru/guide/safari/sfri11471/mac"
-              target="_blank"
-              >Safari</a
-            >
-          </li>
+          <li>Написать «стоп» в Telegram-бот — рассылка прекратится автоматически</li>
+          <li>Направить запрос на email: <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a></li>
+          <li>Написать в Telegram: <a href="https://t.me/JuliaEnergopraktika" target="_blank">@JuliaEnergopraktika</a></li>
         </ul>
         <p>
-          Также вы можете отказаться от сбора данных Яндекс.Метрикой, установив
-          <a
-            href="https://yandex.ru/support/metrica/general/opt-out.html"
-            target="_blank"
-            >дополнение для браузера</a
-          >.
+          Рассылка прекращается в течение 24 часов с момента получения
+          вашего отказа.
+        </p>
+        <p>
+          Отказ от рассылки не влияет на обработку ваших персональных данных
+          для иных целей и не является отзывом согласия на обработку
+          персональных данных.
         </p>
       </div>
 
       <div class="doc-section">
-        <h2>7. Сроки хранения данных</h2>
+        <h2>8. Связь согласия на рассылку и согласия на обработку ПД</h2>
+        <p>
+          Настоящее согласие на получение рекламной рассылки является
+          самостоятельным и не зависит от согласия на обработку персональных
+          данных. Это два отдельных юридических действия:
+        </p>
         <ul>
-          <li>
-            <strong>Данные участниц программы:</strong> в течение срока действия
-            программы и 3 (три) года после её окончания
-          </li>
-          <li>
-            <strong>Данные бухгалтерского учёта (чеки, оплаты):</strong> 5 лет в
-            соответствии с законодательством РФ
-          </li>
-          <li>
-            <strong>Данные cookie и аналитики:</strong> в соответствии с
-            настройками сервиса Яндекс.Метрика
-          </li>
+          <li>Согласие на обработку ПД регулируется Федеральным законом № 152-ФЗ «О персональных данных»</li>
+          <li>Согласие на рассылку регулируется Федеральным законом № 38-ФЗ «О рекламе»</li>
         </ul>
         <p>
-          По истечении указанных сроков данные удаляются или обезличиваются.
+          Отзыв одного согласия не означает автоматического отзыва другого.
         </p>
       </div>
 
       <div class="doc-section">
-        <h2>8. Ваши права</h2>
-        <p>Вы имеете право:</p>
+        <h2>9. Персональные данные</h2>
+        <p>
+          В рамках рассылки обрабатываются следующие персональные данные:
+          Telegram ID, имя в Telegram, username. Обработка осуществляется
+          в соответствии с
+          <a href="privacy-julia.html">Политикой обработки персональных данных</a>.
+        </p>
+      </div>
+
+      <div class="doc-section">
+        <h2>10. Контакты</h2>
+        <p>По любым вопросам, связанным с рассылкой:</p>
         <ul>
-          <li>Запросить информацию о том, какие ваши данные мы обрабатываем</li>
-          <li>Потребовать исправления неточных данных</li>
-          <li>
-            Потребовать удаления ваших данных (кроме случаев, когда хранение
-            обязательно по закону)
-          </li>
-          <li>Отозвать согласие на обработку персональных данных</li>
-        </ul>
-        <p>
-          Для реализации своих прав направьте запрос на
-          <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a> с пометкой
-          «Персональные данные». Мы ответим в течение 10 рабочих дней.
-        </p>
-      </div>
-
-      <div class="doc-section">
-        <h2>9. Защита данных</h2>
-        <p>
-          Мы принимаем разумные организационные и технические меры для защиты
-          персональных данных от несанкционированного доступа, утраты, изменения
-          или уничтожения. Платёжные данные обрабатываются исключительно
-          сертифицированным платёжным сервисом.
-        </p>
-      </div>
-
-      <div class="doc-section">
-        <h2>10. Изменения Политики</h2>
-        <p>
-          Мы оставляем за собой право обновлять настоящую Политику. Актуальная
-          версия всегда доступна на данной странице. Дата последней редакции
-          указана в начале документа.
-        </p>
-      </div>
-
-      <div class="doc-section">
-        <h2>11. Контакты</h2>
-        <p>По любым вопросам, связанным с обработкой персональных данных:</p>
-        <ul>
-          <li>
-            Email: <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a>
-          </li>
-          <li>
-            Telegram:
-            <a href="https://t.me/JuliaEnergopraktika" target="_blank"
-              >@JuliaEnergopraktika</a
-            >
-          </li>
+          <li>Email: <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a></li>
+          <li>Telegram: <a href="https://t.me/JuliaEnergopraktika" target="_blank">@JuliaEnergopraktika</a></li>
         </ul>
       </div>
     </div>
 
     <footer class="doc-footer">
       <p>
-        © 2026 <span>«Любовь с открытыми глазами»</span> · ИП Воробьева Юлия
-        Олеговна
+        © 2026 <span>«Любовь с открытыми глазами»</span> · ИП Воробьева Юлия Олеговна
       </p>
       <p style="margin-top: 6px">
-        <a href="privacy-julia.html">Публичная оферта</a>
-        <span style="margin: 0 6px">·</span> <a href="index.html">На главную</a>
+        <a href="oferta-julia.html">Публичная оферта</a>
+        <span style="margin: 0 6px">·</span>
+        <a href="privacy-julia.html">Политика конфиденциальности</a>
+        <span style="margin: 0 6px">·</span>
+        <a href="index.html">На главную</a>
       </p>
     </footer>
   </body>
