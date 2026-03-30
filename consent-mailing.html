@@ -9,154 +9,73 @@
       rel="stylesheet"
     />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
       :root {
-        --gold: #c9a84c;
-        --gold-light: #e8d5a3;
-        --gold-dark: #8b6914;
-        --cream: #fbf7f0;
-        --dark: #1a1a1a;
-        --text: #3d3d3d;
-        --white: #ffffff;
+        --gold: #c9a84c; --gold-light: #e8d5a3; --gold-dark: #8b6914;
+        --cream: #fbf7f0; --dark: #1a1a1a; --text: #3d3d3d; --white: #ffffff;
       }
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
       body {
-        font-family: "Montserrat", sans-serif;
-        background: var(--cream);
-        color: var(--text);
-        font-size: 15px;
-        line-height: 1.85;
-        font-weight: 400;
+        font-family: "Montserrat", sans-serif; background: var(--cream);
+        color: var(--text); font-size: 15px; line-height: 1.85; font-weight: 400;
       }
-      h1,
-      h2,
-      h3 {
-        font-family: "Cormorant Garamond", serif;
-      }
+      h1, h2, h3 { font-family: "Cormorant Garamond", serif; }
       .doc-nav {
-        background: rgba(251, 247, 240, 0.97);
-        backdrop-filter: blur(12px);
-        padding: 14px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid var(--gold-light);
+        background: rgba(251, 247, 240, 0.97); backdrop-filter: blur(12px);
+        padding: 14px 40px; display: flex; justify-content: space-between;
+        align-items: center; border-bottom: 1px solid var(--gold-light);
       }
       .doc-nav-logo {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 1rem;
-        color: var(--gold-dark);
-        letter-spacing: 2px;
-        text-transform: uppercase;
+        font-family: "Cormorant Garamond", serif; font-size: 1rem;
+        color: var(--gold-dark); letter-spacing: 2px; text-transform: uppercase;
         text-decoration: none;
       }
       .doc-nav-back {
-        font-size: 0.7rem;
-        color: var(--gold);
-        text-decoration: none;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: 500;
+        font-size: 0.7rem; color: var(--gold); text-decoration: none;
+        letter-spacing: 1px; text-transform: uppercase; font-weight: 500;
         transition: color 0.3s;
       }
-      .doc-nav-back:hover {
-        color: var(--gold-dark);
-      }
-      .doc-wrap {
-        max-width: 760px;
-        margin: 0 auto;
-        padding: 60px 24px 80px;
-      }
+      .doc-nav-back:hover { color: var(--gold-dark); }
+      .doc-wrap { max-width: 760px; margin: 0 auto; padding: 60px 24px 80px; }
       .doc-badge {
-        display: inline-block;
-        border: 1px solid rgba(201, 168, 76, 0.4);
-        color: var(--gold);
-        padding: 6px 18px;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 0.72rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 24px;
+        display: inline-block; border: 1px solid rgba(201, 168, 76, 0.4);
+        color: var(--gold); padding: 6px 18px;
+        font-family: "Cormorant Garamond", serif; font-size: 0.72rem;
+        letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px;
       }
       .doc-title {
-        font-size: clamp(2rem, 5vw, 3rem);
-        color: var(--dark);
-        font-weight: 400;
-        margin-bottom: 8px;
-        line-height: 1.15;
+        font-size: clamp(2rem, 5vw, 3rem); color: var(--dark); font-weight: 400;
+        margin-bottom: 8px; line-height: 1.15;
       }
       .doc-date {
-        font-size: 0.72rem;
-        color: #999;
-        letter-spacing: 1px;
-        margin-bottom: 40px;
-        display: block;
+        font-size: 0.72rem; color: #999; letter-spacing: 1px;
+        margin-bottom: 40px; display: block;
       }
-      .doc-section {
-        margin-bottom: 36px;
-      }
+      .doc-section { margin-bottom: 36px; }
       .doc-section h2 {
-        font-size: 1.4rem;
-        color: var(--dark);
-        font-weight: 500;
-        margin-bottom: 14px;
-        padding-bottom: 8px;
+        font-size: 1.4rem; color: var(--dark); font-weight: 500;
+        margin-bottom: 14px; padding-bottom: 8px;
         border-bottom: 1px solid rgba(201, 168, 76, 0.15);
       }
-      .doc-section p {
-        margin-bottom: 12px;
-        color: #555;
-      }
-      .doc-section ul {
-        margin: 8px 0 16px 20px;
-        color: #555;
-      }
-      .doc-section ul li {
-        margin-bottom: 6px;
-        line-height: 1.75;
-      }
+      .doc-section p { margin-bottom: 12px; color: #555; }
+      .doc-section ul { margin: 8px 0 16px 20px; color: #555; }
+      .doc-section ul li { margin-bottom: 6px; line-height: 1.75; }
       .doc-section a {
-        color: var(--gold-dark);
-        text-decoration: underline;
+        color: var(--gold-dark); text-decoration: underline;
         text-underline-offset: 2px;
       }
       .doc-footer {
-        background: #0d0d0d;
-        padding: 30px;
-        text-align: center;
+        background: #0d0d0d; padding: 30px; text-align: center;
         border-top: 1px solid rgba(201, 168, 76, 0.1);
       }
-      .doc-footer p {
-        color: rgba(255, 255, 255, 0.3);
-        font-size: 0.65rem;
-        line-height: 1.8;
-      }
-      .doc-footer a {
-        color: rgba(201, 168, 76, 0.5);
-        text-decoration: none;
-      }
-      .doc-footer a:hover {
-        color: var(--gold);
-      }
-      .doc-footer span {
-        color: rgba(201, 168, 76, 0.5);
-      }
+      .doc-footer p { color: rgba(255, 255, 255, 0.3); font-size: 0.65rem; line-height: 1.8; }
+      .doc-footer a { color: rgba(201, 168, 76, 0.5); text-decoration: none; }
+      .doc-footer a:hover { color: var(--gold); }
+      .doc-footer span { color: rgba(201, 168, 76, 0.5); }
       @media (max-width: 640px) {
-        .doc-nav {
-          padding: 12px 16px;
-        }
-        .doc-wrap {
-          padding: 40px 16px 60px;
-        }
-        .doc-title {
-          font-size: 1.8rem;
-        }
+        .doc-nav { padding: 12px 16px; }
+        .doc-wrap { padding: 40px 16px 60px; }
+        .doc-title { font-size: 1.8rem; }
       }
     </style>
   </head>
@@ -178,11 +97,7 @@
           ИНН: 622800682806<br />
           ОГРНИП: 308623400900025<br />
           Адрес: г. Рязань<br />
-          Telegram:
-          <a href="https://t.me/JuliaEnergopraktika" target="_blank"
-            >@JuliaEnergopraktika</a
-          ><br />
-          Email: <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a>
+          Telegram: <a href="https://t.me/JuliaEnergopraktika" target="_blank">@JuliaEnergopraktika</a>
         </p>
       </div>
 
@@ -202,9 +117,7 @@
         <p>Рассылка осуществляется посредством:</p>
         <ul>
           <li>Сообщений в Telegram-боте</li>
-          <li>
-            Сообщений в закрытых Telegram-каналах и чатах (при наличии доступа)
-          </li>
+          <li>Сообщений в закрытых Telegram-каналах и чатах (при наличии доступа)</li>
         </ul>
       </div>
 
@@ -212,15 +125,9 @@
         <h2>4. Содержание рассылки</h2>
         <p>Рассылка может включать:</p>
         <ul>
-          <li>
-            Полезные материалы: статьи, видео, аудио-практики по теме отношений
-            и психологии
-          </li>
+          <li>Полезные материалы: статьи, видео, аудио-практики по теме отношений и психологии</li>
           <li>Персональные разборы по результатам квиза</li>
-          <li>
-            Информацию о программе «Любовь с открытыми глазами» (описание,
-            тарифы, условия участия)
-          </li>
+          <li>Информацию о программе «Любовь с открытыми глазами» (описание, тарифы, условия участия)</li>
           <li>Анонсы мероприятий: Zoom-сессий, вебинаров, прямых эфиров</li>
           <li>Специальные предложения и акции</li>
           <li>Истории и отзывы участниц программы</li>
@@ -255,28 +162,15 @@
           следующих способов:
         </p>
         <ul>
-          <li>
-            Написать «стоп» в Telegram-бот — рассылка прекратится автоматически
-          </li>
-          <li>
-            Направить запрос на email:
-            <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a>
-          </li>
-          <li>
-            Написать в Telegram:
-            <a href="https://t.me/JuliaEnergopraktika" target="_blank"
-              >@JuliaEnergopraktika</a
-            >
-          </li>
+          <li>Написать «стоп» в Telegram-бот — рассылка прекратится автоматически</li>
+          <li>Написать в Telegram: <a href="https://t.me/JuliaEnergopraktika" target="_blank">@JuliaEnergopraktika</a></li>
         </ul>
         <p>
-          Рассылка прекращается в течение 24 часов с момента получения вашего
-          отказа.
+          Рассылка прекращается в течение 24 часов с момента получения вашего отказа.
         </p>
         <p>
           Отказ от рассылки не влияет на обработку ваших персональных данных для
-          иных целей и не является отзывом согласия на обработку персональных
-          данных.
+          иных целей и не является отзывом согласия на обработку персональных данных.
         </p>
       </div>
 
@@ -288,14 +182,8 @@
           данных. Это два отдельных юридических действия:
         </p>
         <ul>
-          <li>
-            Согласие на обработку ПД регулируется Федеральным законом № 152-ФЗ
-            «О персональных данных»
-          </li>
-          <li>
-            Согласие на рассылку регулируется Федеральным законом № 38-ФЗ «О
-            рекламе»
-          </li>
+          <li>Согласие на обработку ПД регулируется Федеральным законом № 152-ФЗ «О персональных данных»</li>
+          <li>Согласие на рассылку регулируется Федеральным законом № 38-ФЗ «О рекламе»</li>
         </ul>
         <p>Отзыв одного согласия не означает автоматического отзыва другого.</p>
       </div>
@@ -306,9 +194,7 @@
           В рамках рассылки обрабатываются следующие персональные данные:
           Telegram ID, имя в Telegram, username. Обработка осуществляется в
           соответствии с
-          <a href="privacy-julia.html"
-            >Политикой обработки персональных данных</a
-          >.
+          <a href="privacy-julia.html">Политикой обработки персональных данных</a>.
         </p>
       </div>
 
@@ -316,23 +202,14 @@
         <h2>10. Контакты</h2>
         <p>По любым вопросам, связанным с рассылкой:</p>
         <ul>
-          <li>
-            Email: <a href="mailto:atru8292@gmail.com">atru8292@gmail.com</a>
-          </li>
-          <li>
-            Telegram:
-            <a href="https://t.me/JuliaEnergopraktika" target="_blank"
-              >@JuliaEnergopraktika</a
-            >
-          </li>
+          <li>Telegram: <a href="https://t.me/JuliaEnergopraktika" target="_blank">@JuliaEnergopraktika</a></li>
         </ul>
       </div>
     </div>
 
     <footer class="doc-footer">
       <p>
-        © 2026 <span>«Любовь с открытыми глазами»</span> · ИП Воробьева Юлия
-        Олеговна
+        © 2026 <span>«Любовь с открытыми глазами»</span> · ИП Воробьева Юлия Олеговна
       </p>
       <p style="margin-top: 6px">
         <a href="oferta-julia.html">Публичная оферта</a>
