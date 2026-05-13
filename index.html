@@ -444,7 +444,9 @@ nav{padding:12px 16px}.nav-links{display:none}
 
 .obj-grid{grid-template-columns:1fr}
 .about-inner{grid-template-columns:1fr;gap:40px}
-.about-photo-wrap{position:static}
+.about-photo-wrap{position:relative;max-width:340px;margin:0 auto}
+.about-frame{bottom:-8px;right:-8px;width:calc(100% - 14px);height:calc(100% - 14px)}
+.about-photo-badge{bottom:10px;padding:7px 16px;font-size:.55rem;letter-spacing:2px;white-space:nowrap}
 
 .tariffs{padding:60px 10px}
 .tariffs-grid{grid-template-columns:repeat(3,1fr)!important;gap:4px!important}
