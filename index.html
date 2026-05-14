@@ -19,6 +19,8 @@ nav{position:fixed;top:0;width:100%;background:rgba(251,247,240,.97);backdrop-fi
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{text-decoration:none;color:var(--text);font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;transition:color .3s;font-weight:500}
 .nav-links a:hover{color:var(--gold)}
+.nav-links a.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;padding:9px 18px;letter-spacing:1.2px;font-weight:600;transition:all .3s}
+.nav-links a.nav-cta:hover{color:#fff;transform:translateY(-1px);box-shadow:0 6px 18px rgba(201,168,76,.35)}
 .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--white);padding:17px 46px;border:none;font-size:.73rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;font-family:"Montserrat",sans-serif;font-weight:600}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(201,168,76,.4)}
 .btn-outline{background:transparent;color:var(--gold);padding:17px 46px;border:1px solid var(--gold);font-size:.73rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;font-family:"Montserrat",sans-serif;font-weight:600}
@@ -40,6 +42,7 @@ nav{position:fixed;top:0;width:100%;background:rgba(251,247,240,.97);backdrop-fi
 .hero h1 em{color:var(--gold);font-style:italic;font-weight:600;display:block;margin-top:4px}
 .hero-meaning{font-family:"Cormorant Garamond",serif;font-size:clamp(1.15rem,2.8vw,1.5rem);color:var(--gold-light);font-style:italic;font-weight:500;margin-bottom:30px;line-height:1.55;max-width:720px;margin-left:auto;margin-right:auto}
 .hero-meaning .hero-meaning-label{color:var(--gold);font-weight:600;font-style:normal;letter-spacing:1px;text-transform:uppercase;font-size:.72em;display:block;margin-bottom:8px}
+.hero-meaning .hero-meaning-em{color:var(--gold);font-style:italic;font-weight:600}
 .hero-desc{font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.95;max-width:580px;margin:0 auto 52px;font-weight:400}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
@@ -283,6 +286,9 @@ nav{position:fixed;top:0;width:100%;background:rgba(251,247,240,.97);backdrop-fi
 
 /* ====== ТАРИФЫ ====== */
 .tariffs{background:var(--cream);padding:110px 20px}
+.tariffs-intimate{max-width:680px;margin:-30px auto 50px;text-align:center;font-family:"Cormorant Garamond",serif;font-size:1.05rem;color:var(--gold-dark);font-style:italic;line-height:1.7;padding:18px 30px;border-top:1px solid rgba(201,168,76,.25);border-bottom:1px solid rgba(201,168,76,.25);position:relative}
+.tariffs-intimate::before{content:"✦";position:absolute;top:50%;left:-20px;transform:translateY(-50%);color:var(--gold);font-size:.7rem;opacity:.5}
+.tariffs-intimate::after{content:"✦";position:absolute;top:50%;right:-20px;transform:translateY(-50%);color:var(--gold);font-size:.7rem;opacity:.5}
 .tariffs-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;align-items:start}
 .tariff-card{background:var(--white);padding:44px 34px;position:relative;transition:all .35s;box-shadow:0 1px 0 #e8ddd0,1px 0 0 #e8ddd0,-1px 0 0 #e8ddd0,0 -1px 0 #e8ddd0;display:flex;flex-direction:column}
 .tariff-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.08),0 0 0 1px var(--gold);z-index:2}
@@ -346,6 +352,44 @@ nav{position:fixed;top:0;width:100%;background:rgba(251,247,240,.97);backdrop-fi
 .faq-a{font-size:.9rem;color:#666;line-height:2;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
 .faq-a.open{max-height:600px;padding-bottom:24px}
 
+/* ====== МОДАЛКА ОПЛАТЫ ====== */
+.pay-modal-overlay{position:fixed;inset:0;background:rgba(10,10,10,.85);backdrop-filter:blur(8px);z-index:99997;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.pay-modal-overlay.show{opacity:1;pointer-events:auto}
+.pay-modal{background:linear-gradient(160deg,#1a1a1a,#2d2417);border:1px solid rgba(201,168,76,.35);max-width:560px;width:100%;max-height:90vh;overflow-y:auto;padding:48px 40px;position:relative;transform:translateY(20px) scale(.97);transition:transform .4s cubic-bezier(.4,0,.2,1);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.pay-modal-overlay.show .pay-modal{transform:translateY(0) scale(1)}
+.pay-modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border:1px solid rgba(201,168,76,.3);background:transparent;color:var(--gold);cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all .3s}
+.pay-modal-close:hover{background:var(--gold);color:#fff;border-color:var(--gold)}
+.pay-modal-label{text-align:center;color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.pay-modal-title{text-align:center;font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,3.5vw,2.2rem);color:#fff;font-weight:400;line-height:1.2;margin-bottom:8px}
+.pay-modal-title em{color:var(--gold);font-style:italic;font-weight:600}
+.pay-modal-sub{text-align:center;color:rgba(255,255,255,.55);font-size:.85rem;line-height:1.7;margin-bottom:32px;max-width:420px;margin-left:auto;margin-right:auto}
+.pay-tariff{display:block;border:1px solid rgba(201,168,76,.25);background:rgba(255,255,255,.02);padding:18px 22px;margin-bottom:12px;text-decoration:none;transition:all .3s;position:relative;cursor:pointer}
+.pay-tariff:hover{background:rgba(201,168,76,.06);border-color:var(--gold);transform:translateX(4px)}
+.pay-tariff-row{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.pay-tariff-left{flex:1;min-width:0}
+.pay-tariff-name{font-family:"Cormorant Garamond",serif;font-size:1.35rem;color:#fff;font-weight:500;line-height:1;margin-bottom:4px}
+.pay-tariff-sub{font-size:.7rem;color:rgba(255,255,255,.5);letter-spacing:.5px;line-height:1.4}
+.pay-tariff-right{text-align:right;flex-shrink:0}
+.pay-tariff-old{font-family:"Cormorant Garamond",serif;font-size:.85rem;color:rgba(255,255,255,.3);text-decoration:line-through;line-height:1;margin-bottom:2px}
+.pay-tariff-price{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--gold);font-weight:700;line-height:1}
+.pay-tariff.featured{border-color:rgba(201,168,76,.55);background:rgba(201,168,76,.05)}
+.pay-tariff.featured::before{content:"★ ВЫБОР 70%";position:absolute;top:-9px;left:18px;background:linear-gradient(160deg,#1a1a1a,#2d2417);color:var(--gold);font-size:.55rem;letter-spacing:1.5px;padding:0 8px;font-weight:600}
+.pay-modal-prepay{margin-top:20px;padding-top:20px;border-top:1px solid rgba(201,168,76,.15);text-align:center}
+.pay-modal-prepay-label{font-size:.68rem;letter-spacing:1.5px;color:rgba(201,168,76,.7);text-transform:uppercase;font-weight:600;margin-bottom:12px;display:block}
+.pay-modal-prepay-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.pay-modal-prepay-row a{flex:1;min-width:130px;padding:10px 14px;border:1px solid rgba(201,168,76,.3);color:var(--gold);font-size:.62rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;font-weight:600;transition:all .3s;text-align:center;font-family:"Montserrat",sans-serif}
+.pay-modal-prepay-row a:hover{background:rgba(201,168,76,.08);border-color:var(--gold)}
+.pay-modal-legal{text-align:center;margin-top:24px;font-size:.62rem;color:rgba(255,255,255,.35);line-height:1.7}
+.pay-modal-legal a{color:rgba(201,168,76,.6);text-decoration:underline;text-underline-offset:2px}
+
+@media(max-width:768px){
+.pay-modal{padding:32px 22px}
+.pay-tariff-row{flex-direction:column;align-items:flex-start;gap:8px}
+.pay-tariff-right{text-align:left}
+.pay-modal-prepay-row{flex-direction:column}
+.pay-modal-prepay-row a{min-width:auto;width:100%}
+}
+
 /* ====== ФИНАЛ ====== */
 .final-cta{background:linear-gradient(160deg,#111,#2a1f10);padding:120px 20px;text-align:center;position:relative;overflow:hidden}
 .final-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.1),transparent 60%)}
@@ -378,11 +422,11 @@ footer{background:#0d0d0d;padding:36px 30px 28px;text-align:center;border-top:1p
 
 .preloader{position:fixed;inset:0;background:linear-gradient(160deg,#111,#2d2417);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999;transition:opacity .7s ease;padding:20px;text-align:center}
 .preloader.hide{opacity:0;pointer-events:none}
-.preloader-star{font-size:3.5rem;color:var(--gold);animation:preStar 1.2s ease forwards;margin-bottom:24px}
-.preloader-main{font-family:"Cormorant Garamond",serif;font-size:clamp(1.3rem,4vw,2.1rem);color:var(--white);font-weight:300;line-height:1.35;opacity:0;animation:preUp .8s ease .7s forwards;transform:translateY(16px)}
+.preloader-star{font-size:3.5rem;color:var(--gold);animation:preStar .6s ease forwards;margin-bottom:24px}
+.preloader-main{font-family:"Cormorant Garamond",serif;font-size:clamp(1.3rem,4vw,2.1rem);color:var(--white);font-weight:300;line-height:1.35;opacity:0;animation:preUp .4s ease .2s forwards;transform:translateY(16px)}
 .preloader-main em{color:var(--gold);font-style:italic;font-weight:600;display:block;margin-top:8px}
-.preloader-sub{font-family:"Cormorant Garamond",serif;font-size:clamp(.9rem,2.2vw,1.15rem);color:rgba(201,168,76,.6);font-style:italic;margin-top:18px;opacity:0;animation:preUp .8s ease 1.2s forwards;transform:translateY(16px)}
-.preloader-line{width:100px;height:1px;background:rgba(201,168,76,.12);margin-top:32px;position:relative;overflow:hidden;opacity:0;animation:preUp .6s ease 1.6s forwards;transform:translateY(16px)}
+.preloader-sub{font-family:"Cormorant Garamond",serif;font-size:clamp(.9rem,2.2vw,1.15rem);color:rgba(201,168,76,.6);font-style:italic;margin-top:18px;opacity:0;animation:preUp .4s ease .4s forwards;transform:translateY(16px)}
+.preloader-line{width:100px;height:1px;background:rgba(201,168,76,.12);margin-top:32px;position:relative;overflow:hidden;opacity:0;animation:preUp .3s ease .5s forwards;transform:translateY(16px)}
 .preloader-line::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:preScan 1.4s ease-in-out infinite}
 @keyframes preStar{0%{opacity:0;transform:scale(.3)}15%{opacity:1;transform:scale(1.25)}100%{opacity:1;transform:scale(1)}}
 @keyframes preUp{to{opacity:1;transform:translateY(0)}}
@@ -503,15 +547,15 @@ nav{padding:12px 16px}.nav-links{display:none}
 
 <div class="cookie-banner" id="cookieBanner"><p>Мы используем файлы cookie для улучшения работы сайта. <a href="privacy-julia.html">Подробнее</a></p><button class="cookie-accept" onclick="acceptCookies()">Принять</button></div>
 
-<nav><div class="nav-logo">✦ Любовь с открытыми глазами</div><ul class="nav-links"><li><a href="#about">Юлия</a></li><li><a href="#cases">Истории</a></li><li><a href="#program">Программа</a></li><li><a href="#tariffs">Тарифы</a></li><li><a href="#contact">Записаться</a></li></ul></nav>
+<nav><div class="nav-logo">✦ Любовь с открытыми глазами</div><ul class="nav-links"><li><a href="#about">Об эксперте</a></li><li><a href="#cases">Истории</a></li><li><a href="#program">Программа</a></li><li><a href="#tariffs">Тарифы</a></li><li><a href="https://t.me/JuliaEnergopraktika?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%2020%20%D0%BC%D0%B8%D0%BD." target="_blank" class="nav-cta">Бесплатная диагностика</a></li></ul></nav>
 
 <!-- ==================== 1. HERO ==================== -->
 <section class="hero"><div class="hero-content">
 <div class="hero-badge">✦ Авторская программа · 41 день ✦</div>
 <h1>Как перестать<em>выбирать не тех мужчин</em></h1>
-<p class="hero-meaning">Если ты снова и снова попадаешь в одну и ту же историю — дело не в невезении. Дело в твоей внутренней программе выбора. И её можно изменить.</p>
-<p class="hero-desc">За 41 день ты начинаешь притягивать других мужчин. Тех, рядом с которыми не нужно терпеть, доказывать и ждать.</p>
-<div class="hero-btns"><a href="#about" class="btn-gold">Об авторе</a><a href="#tariffs" class="btn-outline">Тарифы</a></div>
+<p class="hero-meaning">И наконец в отношениях выбирать <span class="hero-meaning-em">себя</span>.</p>
+<p class="hero-desc">Если ты снова и снова попадаешь в одну и ту же историю — дело не в невезении. Дело в твоей внутренней программе выбора. И её можно изменить. За 41 день ты начинаешь притягивать тех мужчин, рядом с которыми не нужно терпеть, доказывать и ждать.</p>
+<div class="hero-btns"><a href="https://t.me/JuliaEnergopraktika?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%2020%20%D0%BC%D0%B8%D0%BD." class="btn-gold" target="_blank">Бесплатная диагностика 20 мин</a><a href="#about" class="btn-outline">Об эксперте</a></div>
 </div></section>
 
 <!-- ==================== 2. БОЛИ ==================== -->
@@ -649,41 +693,9 @@ nav{padding:12px 16px}.nav-links{display:none}
 <div class="about-tezis">
 <div class="about-tezis-item">20 лет в собственном бизнесе и в окружении, где живут совершенно другие правила отношений — изнутри знаю, как там всё устроено</div>
 <div class="about-tezis-item">Работаю с женщинами, которые многого достигли сами, но в личной жизни почему-то выбирают не тех</div>
-<div class="about-tezis-item">Сильный мужчина за секунды считывает состояние женщины. Моя задача — сделать так, чтобы он увидел в тебе ту единственную</div>
 </div>
 
 </div></div></section>
-
-<!-- ==================== 5. ЧТО ЭТО + ПОЧЕМУ РАБОТАЕТ — ОБЪЕДИНЁННЫЙ БЛОК ==================== -->
-<section class="method">
-<div class="method-inner">
-<div class="method-head">
-<p class="sec-label">✦ Что это и почему работает ✦</p>
-<h2 class="sec-title sec-title-light">Метод, который меняет сам механизм выбора</h2>
-</div>
-
-<div class="method-grid">
-<div class="method-block">
-<span class="method-mark">Это</span>
-<p>Программа, которая меняет внутренние программы выбора на уровне <span class="ac">нейронных связей</span>. А не мотивационный тренинг, который сложно применить в жизни.</p>
-</div>
-<div class="method-block">
-<span class="method-mark">Результат</span>
-<p>Ты <em>интуитивно</em> начнёшь выбирать действительно подходящих мужчин. А они будут видеть и выбирать тебя. Те мужчины, о которых ты давно мечтала.</p>
-</div>
-</div>
-
-<div class="method-diff">
-<p class="method-diff-text">Психология объясняет <span class="ac">что</span> с тобой происходит, коучинг говорит <span class="ac">что делать</span> — но ни то, ни другое не меняет нейронную программу, которая запускается автоматически до того, как ты успеваешь подумать.</p>
-<div class="method-diff-grid">
-<div class="method-diff-item"><span class="method-diff-icon">≠</span><span class="method-diff-label">Не терапия</span></div>
-<div class="method-diff-item"><span class="method-diff-icon">≠</span><span class="method-diff-label">Не коучинг</span></div>
-<div class="method-diff-item"><span class="method-diff-icon">✦</span><span class="method-diff-label">Нейро-перепрошивка</span></div>
-</div>
-</div>
-
-</div>
-</section>
 
 <!-- ==================== 6. ПРОГРАММА ==================== -->
 <section class="program" id="program"><div class="program-container">
@@ -825,6 +837,37 @@ nav{padding:12px 16px}.nav-links{display:none}
 </div>
 </section>
 
+<!-- ==================== ЧТО ЭТО + ПОЧЕМУ РАБОТАЕТ — ПЕРЕМЕЩЁН ПОСЛЕ ДО/ПОСЛЕ ==================== -->
+<section class="method">
+<div class="method-inner">
+<div class="method-head">
+<p class="sec-label">✦ Что это и почему работает ✦</p>
+<h2 class="sec-title sec-title-light">Метод, который меняет сам механизм выбора</h2>
+</div>
+
+<div class="method-grid">
+<div class="method-block">
+<span class="method-mark">Это</span>
+<p>Программа, которая меняет внутренние программы выбора на уровне <span class="ac">нейронных связей</span>. А не мотивационный тренинг, который сложно применить в жизни.</p>
+</div>
+<div class="method-block">
+<span class="method-mark">Результат</span>
+<p>Ты <em>интуитивно</em> начнёшь выбирать действительно подходящих мужчин. А они будут видеть и выбирать тебя. Те мужчины, о которых ты давно мечтала.</p>
+</div>
+</div>
+
+<div class="method-diff">
+<p class="method-diff-text">Психология объясняет <span class="ac">что</span> с тобой происходит, коучинг говорит <span class="ac">что делать</span> — но ни то, ни другое не меняет нейронную программу, которая запускается автоматически до того, как ты успеваешь подумать.</p>
+<div class="method-diff-grid">
+<div class="method-diff-item"><span class="method-diff-icon">≠</span><span class="method-diff-label">Не терапия</span></div>
+<div class="method-diff-item"><span class="method-diff-icon">≠</span><span class="method-diff-label">Не коучинг</span></div>
+<div class="method-diff-item"><span class="method-diff-icon">✦</span><span class="method-diff-label">Нейро-перепрошивка</span></div>
+</div>
+</div>
+
+</div>
+</section>
+
 <!-- ==================== 10. К ЧЕМУ ТЫ ПРИДЁШЬ ==================== -->
 <section class="measurable"><div class="measurable-inner">
 <p class="sec-label">✦ Что меняется на выходе ✦</p>
@@ -854,6 +897,8 @@ nav{padding:12px 16px}.nav-links{display:none}
 <!-- ==================== 14. ТАРИФЫ ==================== -->
 <section class="tariffs" id="tariffs"><p class="sec-label">✦ Форматы участия ✦</p><h2 class="sec-title">Выбери свой формат</h2><p class="sec-desc">Одна программа, три формата. Все приводят к результату. Разница в глубине сопровождения.</p>
 
+<p class="tariffs-intimate">Мест немного. Запись закрывается по мере набора.</p>
+
 <div class="tariffs-grid">
 
 <div class="tariff-card">
@@ -881,8 +926,8 @@ nav{padding:12px 16px}.nav-links{display:none}
 <span class="tariff-whois">Золотая середина</span>
 <p class="tariff-tagline">Программа + личная работа с Юлией</p>
 <div class="tariff-divider"></div>
-<div class="tariff-oldprice">55 000 ₽</div>
-<div class="tariff-price">44 400 ₽</div>
+<div class="tariff-oldprice">77 700 ₽</div>
+<div class="tariff-price">55 000 ₽</div>
 <span class="tariff-price-note">стоимость программы (41 день)</span>
 <ul class="tariff-list">
 <li>Всё из формата Принцесса</li>
@@ -900,8 +945,8 @@ nav{padding:12px 16px}.nav-links{display:none}
 <span class="tariff-whois">Максимум внимания</span>
 <p class="tariff-tagline">Максимальное сопровождение</p>
 <div class="tariff-divider"></div>
-<div class="tariff-oldprice">99 000 ₽</div>
-<div class="tariff-price">88 800 ₽</div>
+<div class="tariff-oldprice">133 300 ₽</div>
+<div class="tariff-price">99 900 ₽</div>
 <span class="tariff-price-note">стоимость программы (41 день)</span>
 <ul class="tariff-list">
 <li>Всё из формата Королева</li>
@@ -934,9 +979,9 @@ nav{padding:12px 16px}.nav-links{display:none}
 
 <!-- ==================== 15. FAQ ==================== -->
 <section class="faq"><p class="sec-label">✦ Что важно понимать ✦</p><h2 class="sec-title">Ответы на самые частые вопросы</h2><div class="faq-inner">
-<div class="faq-item"><div class="faq-q">Сколько длится программа?</div><div class="faq-a">Программа длится 41 день — именно столько времени нужно мозгу, чтобы новые нейронные связи закрепились и стали автоматическими. Это не двухдневный интенсив, после которого всё откатывается назад через неделю.</div></div>
-<div class="faq-item"><div class="faq-q">А если я за границей?</div><div class="faq-a">Всё проходит онлайн — живые встречи в Zoom, терапевтические сессии в записи и чат поддержки. Клиентки из 12 стран уже проходили программу, и единственное, что нужно, — стабильный интернет.</div></div>
-<div class="faq-item"><div class="faq-q">Я боюсь, что меня узнают</div><div class="faq-a">Конфиденциальность гарантирована: чат участниц закрытый, личные сессии проходят один на один, и все ваши истории остаются внутри группы. Никто не узнает о твоём участии, пока ты сама этого не захочешь.</div></div>
+<div class="faq-item"><div class="faq-q open">Сколько длится программа?</div><div class="faq-a open">Программа длится 41 день — именно столько времени нужно мозгу, чтобы новые нейронные связи закрепились и стали автоматическими. Это не двухдневный интенсив, после которого всё откатывается назад через неделю.</div></div>
+<div class="faq-item"><div class="faq-q open">А если я за границей?</div><div class="faq-a open">Всё проходит онлайн — живые встречи в Zoom, терапевтические сессии в записи и чат поддержки. Клиентки из 12 стран уже проходили программу, и единственное, что нужно, — стабильный интернет.</div></div>
+<div class="faq-item"><div class="faq-q open">Я боюсь, что меня узнают</div><div class="faq-a open">Конфиденциальность гарантирована: чат участниц закрытый, личные сессии проходят один на один, и все ваши истории остаются внутри группы. Никто не узнает о твоём участии, пока ты сама этого не захочешь.</div></div>
 <div class="faq-item"><div class="faq-q">Чем это отличается от психолога?</div><div class="faq-a">Психолог анализирует прошлое и помогает его понять, а эта программа меняет будущее через конкретные действия и нейроупражнения. Здесь нет годовой терапии — есть 41 день, чёткая структура и измеримый результат.</div></div>
 <div class="faq-item"><div class="faq-q">Можно ли участвовать, если я в отношениях?</div><div class="faq-a">Да, и это часто даёт самые сильные результаты: программа помогает увидеть отношения ясно — без иллюзий и без страха. Одни участницы открывают в партнёре то, чего раньше не замечали, а другие понимают, что пора двигаться дальше, и делают это спокойно.</div></div>
 <div class="faq-item"><div class="faq-q">Можно ли оплатить частями?</div><div class="faq-a">Да, по каждому тарифу есть предоплата, которая фиксирует за тобой место, а остальное вносится позже — все детали обсуждаем в личной переписке.</div></div>
@@ -946,12 +991,75 @@ nav{padding:12px 16px}.nav-links{display:none}
 </div></section>
 
 <!-- ==================== 16. ФИНАЛ ==================== -->
-<section class="final-cta" id="contact"><div class="final-cta-inner"><div class="final-cta-badge">✦ Следующий шаг ✦</div><h2>Готова перестать выбирать<br><em>по старому сценарию?</em></h2><p>Запишись на бесплатную диагностику — двадцать минут, которые покажут, какой сценарий управляет твоим выбором и что с этим делать дальше.</p><div class="final-cta-btns"><a href="https://t.me/JuliaEnergopraktika?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%2020%20%D0%BC%D0%B8%D0%BD." class="btn-gold" target="_blank">Записаться на диагностику</a><a href="#tariffs" class="btn-light">Посмотреть форматы</a></div></div></section>
+<section class="final-cta" id="contact"><div class="final-cta-inner"><div class="final-cta-badge">✦ Следующий шаг ✦</div><h2>Готова перестать выбирать<br><em>по старому сценарию?</em></h2><p>Запишись на бесплатную диагностику — двадцать минут, которые покажут, какой сценарий управляет твоим выбором и что с этим делать дальше.</p><div class="final-cta-btns"><a href="https://t.me/JuliaEnergopraktika?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AE%D0%BB%D0%B8%D1%8F.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D1%83%2020%20%D0%BC%D0%B8%D0%BD." class="btn-gold" target="_blank">Записаться на диагностику</a><a href="#tariffs" class="btn-light">Посмотреть форматы</a><button type="button" class="btn-light" onclick="openPayModal()" style="cursor:pointer;font-family:'Montserrat',sans-serif">Оплатить выбранный формат</button></div></div></section>
+
+<!-- ==================== МОДАЛКА ВЫБОРА ТАРИФА ДЛЯ ОПЛАТЫ ==================== -->
+<div class="pay-modal-overlay" id="payModal" onclick="if(event.target===this)closePayModal()">
+<div class="pay-modal">
+<button class="pay-modal-close" onclick="closePayModal()" aria-label="Закрыть">✕</button>
+<p class="pay-modal-label">✦ Оплата ✦</p>
+<h3 class="pay-modal-title">Выбери свой <em>формат</em></h3>
+<p class="pay-modal-sub">Все три формата ведут к одному результату. Разница — в глубине сопровождения.</p>
+
+<a href="https://payform.ru/4qaK55H/" target="_blank" class="pay-tariff">
+<div class="pay-tariff-row">
+<div class="pay-tariff-left">
+<div class="pay-tariff-name">Принцесса</div>
+<div class="pay-tariff-sub">Программа + групповая поддержка</div>
+</div>
+<div class="pay-tariff-right">
+<div class="pay-tariff-old">25 000 ₽</div>
+<div class="pay-tariff-price">22 200 ₽</div>
+</div>
+</div>
+</a>
+
+<a href="https://payform.ru/cbaK5bV/" target="_blank" class="pay-tariff featured">
+<div class="pay-tariff-row">
+<div class="pay-tariff-left">
+<div class="pay-tariff-name">Королева</div>
+<div class="pay-tariff-sub">Программа + личная работа с Юлией</div>
+</div>
+<div class="pay-tariff-right">
+<div class="pay-tariff-old">77 700 ₽</div>
+<div class="pay-tariff-price">55 000 ₽</div>
+</div>
+</div>
+</a>
+
+<a href="https://payform.ru/gmaK5ee/" target="_blank" class="pay-tariff">
+<div class="pay-tariff-row">
+<div class="pay-tariff-left">
+<div class="pay-tariff-name">Императрица</div>
+<div class="pay-tariff-sub">Максимальное сопровождение</div>
+</div>
+<div class="pay-tariff-right">
+<div class="pay-tariff-old">133 300 ₽</div>
+<div class="pay-tariff-price">99 900 ₽</div>
+</div>
+</div>
+</a>
+
+<div class="pay-modal-prepay">
+<span class="pay-modal-prepay-label">— или внести предоплату —</span>
+<div class="pay-modal-prepay-row">
+<a href="https://payform.ru/4vb42lT/" target="_blank">Принцесса · 5 000 ₽</a>
+<a href="https://payform.ru/8nb42pF/" target="_blank">Королева · 10 000 ₽</a>
+<a href="https://payform.ru/egb42sK/" target="_blank">Императрица · 25 000 ₽</a>
+</div>
+</div>
+
+<p class="pay-modal-legal">Оплата через Продамус. Нажимая, ты соглашаешься с <a href="oferta-julia.html">Офертой</a> и <a href="privacy-julia.html">Политикой</a>.</p>
+</div>
+</div>
 
 <footer><div class="footer-legal"><p>© 2026 <span>«Любовь с открытыми глазами»</span> · Юлия Люмен · Все права защищены</p><p style="margin-top:10px"><a href="oferta-julia.html">Публичная оферта</a> · <a href="privacy-julia.html">Политика конфиденциальности</a> · <a href="consent-mailing.html">Согласие на рассылку</a></p><div class="footer-rekvizity">Индивидуальный предприниматель Воробьева Юлия Олеговна<br>ИНН 622800682806 · ОГРНИП 308623400900025 · г. Рязань<br><a href="https://t.me/JuliaEnergopraktika" target="_blank">Telegram: @JuliaEnergopraktika</a></div></div></footer>
 
 <script>
-window.addEventListener('load',function(){setTimeout(function(){var p=document.getElementById('preloader');if(p){p.classList.add('hide');setTimeout(function(){p.style.display='none'},700)}},2400)});
+function openPayModal(){document.getElementById('payModal').classList.add('show');document.body.style.overflow='hidden'}
+function closePayModal(){document.getElementById('payModal').classList.remove('show');document.body.style.overflow=''}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closePayModal()});
+window.addEventListener('load',function(){setTimeout(function(){var p=document.getElementById('preloader');if(p){p.classList.add('hide');setTimeout(function(){p.style.display='none'},500)}},800)});
 function acceptCookies(){localStorage.setItem('cookiesAccepted','1');document.getElementById('cookieBanner').classList.remove('show')}
 setTimeout(function(){if(!localStorage.getItem('cookiesAccepted'))document.getElementById('cookieBanner').classList.add('show')},3200);
 document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.classList.toggle('open');q.nextElementSibling.classList.toggle('open')})});
